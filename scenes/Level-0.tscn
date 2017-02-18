@@ -1,0 +1,126 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://images/fondos/fondo-verde-1.png" type="Texture" id=1]
+[ext_resource path="res://src/tileset-escenario.tres" type="TileSet" id=2]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Moneda.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/HUD.tscn" type="PackedScene" id=5]
+
+[node name="Level-0" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+scroll/offset = Vector2( 10, 0 )
+scroll/base_offset = Vector2( 0, 0 )
+scroll/base_scale = Vector2( 1, 1 )
+scroll/limit_begin = Vector2( 0, 0 )
+scroll/limit_end = Vector2( 0, 0 )
+scroll/ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+motion/scale = Vector2( 1.1, 1 )
+motion/offset = Vector2( 0, 0 )
+motion/mirroring = Vector2( 160, 0 )
+
+[node name="fondo" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+
+texture = ExtResource( 1 )
+centered = false
+
+[node name="fondo1" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+
+transform/pos = Vector2( 160, 0 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="fondo4" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+
+visibility/visible = false
+transform/pos = Vector2( 320, 0 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="fondo3" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+
+visibility/visible = false
+transform/pos = Vector2( 480, 0 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="TileMap" type="TileMap" parent="."]
+
+visibility/blend_mode = 4
+mode = 0
+tile_set = ExtResource( 2 )
+cell/size = Vector2( 16, 16 )
+cell/quadrant_size = 16
+cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+cell/half_offset = 2
+cell/tile_origin = 0
+cell/y_sort = false
+collision/use_kinematic = true
+collision/friction = 1.0
+collision/bounce = 0.0
+collision/layers = 1
+collision/mask = 1
+occluder/light_mask = 1
+tile_data = IntArray( 196618, 12, 196619, 12, 196620, 12, 262147, 12, 262148, 12, 262149, 12, 327681, 18, 327682, 19, 327683, 20, 327687, 12, 327688, 12, 327689, 12, 327691, 25, 327693, 18, 327694, 19, 327695, 20, 327715, 5, 327716, 3, 327717, 18, 327718, 19, 327719, 20, 393217, 21, 393218, 22, 393219, 23, 393227, 9, 393229, 21, 393230, 22, 393231, 23, 393237, 15, 393238, 15, 393241, 13, 393242, 13, 393243, 13, 393244, 13, 393245, 13, 393251, 6, 393252, 8, 393253, 21, 393254, 22, 393255, 23, 458754, 24, 458763, 10, 458766, 24, 458767, 25, 458769, 15, 458770, 15, 458786, 11, 458787, 6, 458788, 8, 458790, 24, 524288, 0, 524289, 0, 524290, 0, 524291, 0, 524292, 0, 524293, 0, 524294, 2, 524295, 17, 524296, 17, 524297, 1, 524298, 0, 524299, 0, 524300, 0, 524301, 0, 524302, 0, 524303, 2, 524320, 1, 524321, 0, 524322, 0, 524323, 0, 524324, 0, 524325, 0, 524326, 0, 524327, 2 )
+__meta__ = { "_edit_lock_":true }
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 192, 32 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+transform/pos = Vector2( -64, -112 )
+offset = Vector2( -80, 0 )
+anchor_mode = 0
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit/left = 0
+limit/top = 0
+limit/right = 720
+limit/bottom = 0
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = true
+smoothing/speed = 4.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
+
+[node name="Moneda" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 135.784, 68.1912 )
+
+[node name="Moneda5" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 208.83, 114.294 )
+
+[node name="Moneda1" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 353.125, 82.5608 )
+
+[node name="Moneda2" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 465.089, 82.5608 )
+
+[node name="Moneda3" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 444.133, 82.5608 )
+
+[node name="Moneda4" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 423.177, 82.5608 )
+
+[node name="HUD" parent="." instance=ExtResource( 5 )]
+
+
