@@ -15,7 +15,15 @@ Difenir mecánicas, tiempos muerte o muertes.
 
 Artes:
 
-Definir temática
+-----------------------------------
+
+Definir temática, propuestas, venga nenes a proponer:
+
+Pollo sin cabeza
+
+Piratas
+
+-----------------------------------
 
 Personaje, pantallas, potenciadores, menús, promo
 
@@ -33,6 +41,7 @@ Gracias  Antonio cga:
 
 https://github.com/toniocga/plataformas
 
+--------------------------------------------------------------------------------------------------------------
 
 ## Welcome to Cyclo 𝛑 Studio
 
