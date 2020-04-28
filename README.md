@@ -5,6 +5,10 @@ https://github.com/toniocga/plataformas
 
 Aquí continuamos con el plataformas para una Game Jam
 
+Aquí continua con nuestro documento de diseño de juego:
+
+https://github.com/CycloPiStudio/plataformas/blob/master/Proyecto_Jam.md
+
 Pasicos que vamos dando:
 
 De momento lo vamos a pasar a Godot 3
