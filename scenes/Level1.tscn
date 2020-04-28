@@ -1,111 +1,47 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://src/tileset-escenario.tres" type="TileSet" id=1]
 [ext_resource path="res://images/fondos/fondo-verde.png" type="Texture" id=2]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Moneda.tscn" type="PackedScene" id=4]
-[ext_resource path="res://fonts/pixelated/pixelated.ttf" type="DynamicFontData" id=5]
 
 [sub_resource type="DynamicFont" id=1]
-
-font/size = 57
-font/use_mipmaps = false
-font/use_filter = false
-font/font = ExtResource( 5 )
 
 [node name="Level1" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
-
-mode = 0
 tile_set = ExtResource( 1 )
-cell/size = Vector2( 16, 16 )
-cell/quadrant_size = 16
-cell/custom_transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-cell/half_offset = 2
-cell/tile_origin = 0
-cell/y_sort = false
-collision/use_kinematic = true
-collision/friction = 1.0
-collision/bounce = 0.0
-collision/layers = 1
-collision/mask = 1
-occluder/light_mask = 1
-tile_data = IntArray( 2555911, 13, 2555912, 13, 2555913, 13, 2555914, 13, 2686978, 18, 2686979, 19, 2686980, 20, 2686981, 13, 2686982, 13, 2686985, 18, 2686986, 19, 2686987, 20, 2687001, 18, 2687002, 19, 2687003, 20, 2752514, 21, 2752515, 22, 2752516, 23, 2752521, 21, 2752522, 22, 2752523, 23, 2752534, 25, 2752536, 9, 2752537, 21, 2752538, 22, 2752539, 23, 2818049, 13, 2818050, 13, 2818051, 24, 2818054, 25, 2818058, 24, 2818067, 25, 2818068, 5, 2818069, 4, 2818070, 3, 2818072, 10, 2818073, 25, 2818074, 24, 2818079, 14, 2818080, 14, 2883584, 0, 2883585, 0, 2883586, 0, 2883587, 0, 2883588, 0, 2883589, 0, 2883590, 0, 2883591, 0, 2883592, 0, 2883593, 0, 2883594, 0, 2883595, 0, 2883596, 2, 2883597, 16, 2883598, 16, 2883599, 16, 2883600, 1, 2883601, 0, 2883602, 0, 2883603, 0, 2883604, 0, 2883605, 0, 2883606, 0, 2883607, 0, 2883608, 0, 2883609, 0, 2883610, 2, 2883612, 15, 2883613, 15, 2883618, 15, 2883619, 15, 2883620, 15, 2883621, 13, 2883622, 13, 2883623, 13 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 2555911, 13, 0, 2555912, 13, 0, 2555913, 13, 0, 2555914, 13, 0, 2686978, 18, 0, 2686979, 19, 0, 2686980, 20, 0, 2686981, 13, 0, 2686982, 13, 0, 2686985, 18, 0, 2686986, 19, 0, 2686987, 20, 0, 2687001, 18, 0, 2687002, 19, 0, 2687003, 20, 0, 2752514, 21, 0, 2752515, 22, 0, 2752516, 23, 0, 2752521, 21, 0, 2752522, 22, 0, 2752523, 23, 0, 2752534, 25, 0, 2752536, 9, 0, 2752537, 21, 0, 2752538, 22, 0, 2752539, 23, 0, 2818049, 13, 0, 2818050, 13, 0, 2818051, 24, 0, 2818054, 25, 0, 2818058, 24, 0, 2818067, 25, 0, 2818068, 5, 0, 2818069, 4, 0, 2818070, 3, 0, 2818072, 10, 0, 2818073, 25, 0, 2818074, 24, 0, 2818079, 14, 0, 2818080, 14, 0, 2883584, 0, 0, 2883585, 0, 0, 2883586, 0, 0, 2883587, 0, 0, 2883588, 0, 0, 2883589, 0, 0, 2883590, 0, 0, 2883591, 0, 0, 2883592, 0, 0, 2883593, 0, 0, 2883594, 0, 0, 2883595, 0, 0, 2883596, 2, 0, 2883597, 16, 0, 2883598, 16, 0, 2883599, 16, 0, 2883600, 1, 0, 2883601, 0, 0, 2883602, 0, 0, 2883603, 0, 0, 2883604, 0, 0, 2883605, 0, 0, 2883606, 0, 0, 2883607, 0, 0, 2883608, 0, 0, 2883609, 0, 0, 2883610, 2, 0, 2883612, 15, 0, 2883613, 15, 0, 2883618, 15, 0, 2883619, 15, 0, 2883620, 15, 0, 2883621, 13, 0, 2883622, 13, 0, 2883623, 13, 0 )
 
 [node name="Fondo" type="Sprite" parent="."]
-
-transform/pos = Vector2( 0, 592 )
-z/z = -1
 texture = ExtResource( 2 )
 centered = false
 
 [node name="Fondo1" type="Sprite" parent="."]
-
-transform/pos = Vector2( 160, 592 )
-z/z = -1
 texture = ExtResource( 2 )
 centered = false
 
 [node name="Fondo2" type="Sprite" parent="."]
-
-transform/pos = Vector2( 320, 592 )
-z/z = -1
 texture = ExtResource( 2 )
 centered = false
 
 [node name="Fondo3" type="Sprite" parent="."]
-
-transform/pos = Vector2( 480, 592 )
-z/z = -1
 texture = ExtResource( 2 )
 centered = false
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 96, 688 )
-
 [node name="Moneda" parent="." instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 392, 662.5 )
 
 [node name="Moneda1" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 264, 694.5 )
-
 [node name="hud" type="CanvasLayer" parent="."]
-
-layer = 1
-offset = Vector2( 0, 0 )
-rotation = 0.0
-scale = Vector2( 1, 1 )
 
 [node name="Panel" type="Panel" parent="hud"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 426.0
-margin/top = 142.0
-margin/right = 506.0
-margin/bottom = 192.0
-
 [node name="puntuacion" type="Label" parent="hud/Panel"]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 49.0
-margin/top = -9.0
-margin/right = 89.0
-margin/bottom = 56.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "0"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
-
