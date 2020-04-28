@@ -1,4 +1,4 @@
-# plataformas Godot
+# Juego Plataformas Godot
 Practicando con Godot, juego de plataformas. Gracias  Antonio cga:
 
 https://github.com/toniocga/plataformas
