@@ -7,25 +7,32 @@ Diseño de juego: No es diseño de gráficos.
 Juego 2D con un solo botón. El protagonista avanza automáticamente, debe de saltar los obstáculos , ¿coger potenciadores? 
 ¿cambio de sentido?
 
+Hay que ponerlo para movil
+
+-----------------------------------
 Mecnánicas:
 
 Primeramente se deben pasar a Godot 3.
 
-Difenir mecánicas, tiempos muerte o muertes.
-
-Artes:
+Difenir mecánicas, tiempos muerte o muertes, menús, ciclo de juego.
 
 -----------------------------------
 
-Definir temática, propuestas, venga nenes a proponer:
+Artes:
+
+- Definir temática, propuestas, venga nenes a proponer:
 
 * Pollo sin cabeza
 
 * Piratas
 
+Personaje, pantallas, malos, potenciadores, menús, promo
+
 -----------------------------------
 
-Personaje, pantallas, potenciadores, menús, promo
+Audio: música, sonidos 
+
+-----------------------------------
 
 Publicación:
 
