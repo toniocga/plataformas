@@ -1,13 +1,37 @@
 # Juego plataformas Godot
-Practicando con Godot, juego de plataformas. Gracias  Antonio cga:
+
+Bueno aquí se va poniendo las historias del proyecto
+
+Diseño de juego: No es diseño de gráficos.
+
+Juego 2D con un solo botón. El protagonista avanza automáticamente, debe de saltar los obstáculos , ¿coger potenciadores? 
+¿cambio de sentido?
+
+Mecnánicas:
+
+Primeramente se deben pasar a Godot 3.
+
+Difenir mecánicas, tiempos muerte o muertes.
+
+Artes:
+
+Definir temática
+
+Personaje, pantallas, potenciadores, menús, promo
+
+Publicación:
+
+Sacar html del juego
+Sacar html para ichio
+
+
+
+
+Practicando con Godot, juego de plataformas. 
+
+Gracias  Antonio cga:
 
 https://github.com/toniocga/plataformas
-
-Aquí continuamos con el plataformas para una Game Jam
-
-Pasicos que vamos dando:
-
-De momento lo vamos a pasar a Godot 3
 
 
 ## Welcome to Cyclo 𝛑 Studio
@@ -17,17 +41,6 @@ You can visit our website [cyclopistudio.github.io](https://cyclopistudio.github
 Visita nuestra página Web de CyloPi Studio y verán nuestros juegos:
 
 https://cyclopistudio.github.io/
-
-
-
-### Some examples:
-
-https://cyclopistudio.github.io/CyloPi-Studio-Web/testing_2020/mazmongadas/mazmongadas.html
-
-https://cyclopistudio.github.io/CyloPi-Studio-Web/testing_2020/redzeppelin/zeppelin.html
-
-https://cyclopistudio.github.io/CyloPi-Studio-Web/testing_2020/SuButton/SuButton.htmlor
-
 
 
 #### Collaborators and partners:
