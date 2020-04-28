@@ -1,4 +1,4 @@
-# Juego plataformas Godot
+# Documento de diseño de juego plataformas Godot
 
 Bueno aquí se va poniendo las historias del proyecto
 
@@ -42,7 +42,7 @@ Sacar html para ichio
 
 -----------------------------------
 
-Producción (aquí vamos pasando las cosas que se van haciendo):
+## Producción (aquí vamos pasando las cosas que se van haciendo):
 
 Jose: Documento de diseño de juego
 
@@ -52,7 +52,7 @@ Usuario 3: A 2 manos
 
 -----------------------------------
 
-Objetivos alcanzados (aquí vamos pasando las cosas que se ha terminado):
+## Objetivos alcanzados (aquí vamos pasando las cosas que se ha terminado):
 
 Cyclo π Studio: Estructura de diseño de juego, base rama template 
 
