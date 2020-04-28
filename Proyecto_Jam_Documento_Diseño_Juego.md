@@ -2,6 +2,8 @@
 
 Bueno aquí se va poniendo las historias del proyecto
 
+-----------------------------------
+
 Diseño de juego: No es diseño de gráficos.
 
 Juego 2D con un solo botón. El protagonista avanza automáticamente, debe de saltar los obstáculos , ¿coger potenciadores? 
@@ -18,15 +20,13 @@ Difenir mecánicas, tiempos muerte o muertes, menús, ciclo de juego.
 
 -----------------------------------
 
-Artes:
+Artes (Personaje, pantallas, malos, potenciadores, menús, promo):
 
-- Definir temática, propuestas, venga nenes a proponer:
+Definir temática, propuestas, venga nenes a proponer:
 
 * Pollo sin cabeza
 
 * Piratas
-
-Personaje, pantallas, malos, potenciadores, menús, promo
 
 -----------------------------------
 
@@ -37,13 +37,14 @@ Audio: música, sonidos
 Publicación:
 
 Sacar html del juego
+
 Sacar html para ichio
 
 -----------------------------------
 
 Producción (aquí vamos pasando las cosas que se van haciendo):
 
-Jose: Docmento de diseño de juego
+Jose: Documento de diseño de juego
 
 Usuario 2: tocandose los ...
 
