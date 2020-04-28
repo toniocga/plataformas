@@ -19,9 +19,9 @@ Artes:
 
 Definir temática, propuestas, venga nenes a proponer:
 
-  Pollo sin cabeza
+* Pollo sin cabeza
 
-  Piratas
+* Piratas
 
 -----------------------------------
 
