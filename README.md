@@ -3,7 +3,10 @@ Practicando con Godot, juego de plataformas. Gracias  Antonio cga:
 
 https://github.com/toniocga/plataformas
 
-Aquí continuamos con el plataformas para una Gama Jam
+Aquí continuamos con el plataformas para una Game Jam
+
+Pasicos que vamos dando:
+
 De momento lo vamos a pasar a Godot 3
 
 
