@@ -3,16 +3,14 @@ Practicando con Godot, juego de plataformas. Gracias  Antonio cga:
 
 https://github.com/toniocga/plataformas
 
-Aquí continuamos con el plataformas para una Game Jam
+-------------------------------------------
+Aquí continuamos con el template para una Game Jam
 
-Aquí continua con nuestro documento de diseño de juego:
+Nuestro DOcumento de Diseño de Juego (Pasicos que vamos dando):
 
-https://github.com/CycloPiStudio/plataformas/blob/master/Proyecto_Jam.md
+https://github.com/CycloPiStudio/plataformas/blob/master/Proyecto_Jam_Documento_Dise%C3%B1o_Juego.md
 
-Pasicos que vamos dando:
-
-De momento lo vamos a pasar a Godot 3
-
+-------------------------------------------
 
 ## Welcome to Cyclo 𝛑 Studio
 
