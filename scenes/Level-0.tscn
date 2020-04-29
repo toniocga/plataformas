@@ -11,22 +11,13 @@
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.5, 0.5 )
 
 [node name="fondo" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 texture = ExtResource( 1 )
 centered = false
-
-[node name="fondo1" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-texture = ExtResource( 1 )
-centered = false
-
-[node name="fondo4" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-texture = ExtResource( 1 )
-centered = false
-
-[node name="fondo3" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-texture = ExtResource( 1 )
-centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 480, 144 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 2 )
@@ -38,11 +29,6 @@ __meta__ = {
 }
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-offset = Vector2( -80, 0 )
-anchor_mode = 0
-current = true
 
 [node name="Moneda" parent="." instance=ExtResource( 4 )]
 
