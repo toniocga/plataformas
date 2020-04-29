@@ -19,6 +19,12 @@ config/name="plataformas"
 run/main_scene="res://scenes/Level-0.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=160
+window/size/height=92
+window/stretch/mode="viewport"
+
 [rendering]
 
 quality/driver/driver_name="GLES2"
