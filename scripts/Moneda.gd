@@ -13,6 +13,6 @@ func _ready():
 func _on_Area2D_body_enter( body ):
 	if body.get_name() == "Player":
 		self.queue_free()
-		Global.puntuacion += 1
-		print (Global.puntuacion)
+#		Global.puntuacion += 1
+#		print (Global.puntuacion)
 		
