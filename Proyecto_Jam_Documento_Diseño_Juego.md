@@ -8,10 +8,6 @@ Diseño de juego: No es diseño de gráficos.
 
 Juego 2D con un solo botón. El protagonista avanza automáticamente, debe de saltar los obstáculos , ¿coger potenciadores? 
 
-EL juego no se muestra adecuadamente:
-
-https://cyclopistudio.github.io/CyloPi-Studio-Web/testing_2020/pruebas/1-boton-test.html
-
 ¿cambio de sentido?
 
 Hay que ponerlo para movil
@@ -23,11 +19,15 @@ Primeramente se deben pasar a Godot 3:
 
 Definir formato gráficos: tamaño de la pantalla (lo que se ve) y ajustar escala cámara y/o nivel - player
 
+EL juego no se muestra adecuadamente:
+
+https://cyclopistudio.github.io/CyloPi-Studio-Web/testing_2020/pruebas/1-boton-test.html
+
 Difenir mecánicas, tiempos muerte o muertes, menús, ciclo de juego.
 
 Propuesta de mecánicas de menús - juego con botón secuencial:
 
-Panatalla inicio (portada) ==> panatalla menu 1 ( muestra créditos y controles) ==> juego nivel 1,  todas las transiciones con solo botón ( toda la pantalla de botón ) ==> game over / win (transición automática con  temporizador + botón ) ==> panatalla inicio (portada)u otro nivel
+Panatalla inicio (portada) ==> panatalla menu 1 ( muestra créditos y controles) ==> juego nivel 1,  todas las transiciones con solo botón ( toda la pantalla de botón ) ==> game over / win (transición automática con  temporizador + botón ) ==> panatalla inicio (portada) u otro nivel (pondré un flujograma)
 
 -----------------------------------
 
