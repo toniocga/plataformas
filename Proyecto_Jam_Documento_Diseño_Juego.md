@@ -29,6 +29,8 @@ Propuesta de mecánicas de menús - juego con botón secuencial:
 
 Panatalla inicio (portada) ==> panatalla menu 1 ( muestra créditos y controles) ==> juego nivel 1,  todas las transiciones con solo botón ( toda la pantalla de botón ) ==> game over / win (transición automática con  temporizador + botón ) ==> panatalla inicio (portada) u otro nivel (pondré un flujograma)
 
+![](https://raw.githubusercontent.com/CycloPiStudio/plataformas/master/Documento%20Dise%C3%B1o/flujograma-juego-un-boton.jpg?w=1000)
+
 -----------------------------------
 
 Artes (Personaje, pantallas, malos, potenciadores, menús, promo):
