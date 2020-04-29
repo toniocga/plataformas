@@ -7,6 +7,11 @@ Bueno aquí se va poniendo las historias del proyecto
 Diseño de juego: No es diseño de gráficos.
 
 Juego 2D con un solo botón. El protagonista avanza automáticamente, debe de saltar los obstáculos , ¿coger potenciadores? 
+
+EL juego no se muestra adecuadamente:
+
+https://cyclopistudio.github.io/CyloPi-Studio-Web/testing_2020/pruebas/1-boton-test.html
+
 ¿cambio de sentido?
 
 Hay que ponerlo para movil
@@ -42,6 +47,8 @@ Audio: música, sonidos
 
 Publicación:
 
+Créditos,  descripción , promos, ¿ landing page ?( podría valer la de ichio, si se hace en condiones)
+
 Sacar html del juego
 
 Sacar html para ichio
@@ -61,10 +68,11 @@ Usuario 3: A 2 manos
 -----------------------------------
 
 ## Objetivos alcanzados (aquí vamos pasando las cosas que se ha terminado):
-
-Cyclo π Studio: Estructura de diseño de juego, base rama template 
+Jose: pruebas de exportación a html del juego
 
 Jose: Base para desarrollar el documento de diseño de juego
+
+Cyclo π Studio: Estructura de diseño de juego, base rama template 
 
 -----------------------------------
 
