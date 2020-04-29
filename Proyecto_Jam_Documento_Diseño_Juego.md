@@ -14,9 +14,15 @@ Hay que ponerlo para movil
 -----------------------------------
 Mecnánicas:
 
-Primeramente se deben pasar a Godot 3.
+Primeramente se deben pasar a Godot 3:
+
+Definir formato gráficos: tamaño de la pantalla (lo que se ve) y ajustar escala cámara y/o nivel - player
 
 Difenir mecánicas, tiempos muerte o muertes, menús, ciclo de juego.
+
+Propuesta de mecánicas de menús - juego con botón secuencial:
+
+Panatalla inicio (portada) ==> panatalla menu 1 ( muestra créditos y controles) ==> juego nivel 1,  todas las transiciones con solo botón ( toda la pantalla de botón ) ==> game over / win (transición automática con  temporizador + botón ) ==> panatalla inicio (portada)u otro nivel
 
 -----------------------------------
 
@@ -44,7 +50,9 @@ Sacar html para ichio
 
 ## Producción (aquí vamos pasando las cosas que se van haciendo):
 
-Jose: Documento de diseño de juego
+Jose: Repaso de errores para adapatación a Godot 3D
+
+Bravo: lo que le da la gana, pon aquí lo que estás haciendo +  abajo lo que has terminado
 
 Usuario 2: tocandose los ...
 
@@ -55,6 +63,8 @@ Usuario 3: A 2 manos
 ## Objetivos alcanzados (aquí vamos pasando las cosas que se ha terminado):
 
 Cyclo π Studio: Estructura de diseño de juego, base rama template 
+
+Jose: Base para desarrollar el documento de diseño de juego
 
 -----------------------------------
 
