@@ -13,8 +13,7 @@ export var slope_slide_threshold := 50.0
 #var vidas_personaje = 3
 var velocity := Vector2()
 #var conesion_anima_fin
-var nodoprincipal
-var jumping = false
+
 var left = -0.5
 var right = 0.5
 var direction_x = right
