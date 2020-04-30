@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="plataformas"
-run/main_scene="res://scenes/Level-0.tscn"
+run/main_scene="res://scenes/Menu_entrar.tscn"
 config/icon="res://icon.png"
 
 [display]
