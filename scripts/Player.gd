@@ -17,6 +17,7 @@ var velocity := Vector2()
 var left = -0.5
 var right = 0.5
 var direction_x = right
+var bandera_boton_pulsao = false
 
 func _physics_process(delta: float) -> void:
 #	var direction_x := Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
@@ -25,9 +26,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		snap = false
 	if Input.is_action_just_pressed("ui_up") and snap:
-		
-		snap = false
-		velocity.y = -jump_force
+		salto()
 #		audio_player.play()
 	
 	
@@ -41,14 +40,13 @@ func _physics_process(delta: float) -> void:
 	if is_on_wall():
 		if direction_x == left:
 			direction_x = right
-			if Input.is_action_pressed("ui_up"):
-				snap = false
-				velocity.y = -jump_force
+			if Input.is_action_pressed("ui_up") or bandera_boton_pulsao:
+				salto()
 				
 		elif direction_x == right:
 			direction_x = left
 
-			if Input.is_action_pressed("ui_up"):
+			if Input.is_action_pressed("ui_up") or bandera_boton_pulsao:
 				salto()
 				
 	var acaba_aterizar := is_on_floor() and not snap
@@ -73,6 +71,7 @@ func update_animation(velocity: Vector2) -> void:
 
 
 func _on_TextureButton_pressed():
+	bandera_boton_pulsao = false
 	if snap :
 		salto()
 	pass # Replace with function body.
@@ -80,4 +79,7 @@ func _on_TextureButton_pressed():
 func salto():
 	snap = false
 	velocity.y = -jump_force
-	
+
+func _on_TextureButton_button_down():
+	bandera_boton_pulsao = true
+	pass # Replace with function body.
