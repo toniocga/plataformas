@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/Menu_entrar.gd" type="Script" id=1]
+[ext_resource path="res://src/tileset-escenario.tres" type="TileSet" id=2]
+
+[node name="Menu_entrar" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_right = 162.0
+margin_bottom = 94.0
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( -3.14337, -3.44274 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 0, 14, 0, 1, 14, 0, 2, 14, 0, 3, 14, 0, 4, 14, 0, 5, 14, 0, 6, 14, 0, 7, 14, 0, 8, 14, 0, 9, 14, 0, 65536, 14, 0, 65537, 5, 0, 65538, 4, 0, 65539, 4, 0, 65540, 4, 0, 65541, 4, 0, 65542, 4, 0, 65543, 4, 0, 65544, 3, 0, 65545, 14, 0, 131072, 14, 0, 131073, 6, 0, 131074, 7, 0, 131075, 7, 0, 131076, 7, 0, 131077, 7, 0, 131078, 7, 0, 131079, 7, 0, 131080, 8, 0, 131081, 14, 0, 196608, 14, 0, 196609, 6, 0, 196610, 7, 0, 196611, 7, 0, 196612, 7, 0, 196613, 7, 0, 196614, 7, 0, 196615, 7, 0, 196616, 8, 0, 196617, 14, 0, 262144, 14, 0, 262145, 6, 0, 262146, 7, 0, 262147, 7, 0, 262148, 7, 0, 262149, 7, 0, 262150, 7, 0, 262151, 7, 0, 262152, 8, 0, 262153, 14, 0, 327680, 14, 0, 327681, 14, 0, 327682, 14, 0, 327683, 14, 0, 327684, 14, 0, 327685, 14, 0, 327686, 14, 0, 327687, 14, 0, 327688, 14, 0, 327689, 14, 0 )
+
+[node name="Creditos" type="Label" parent="."]
+margin_left = 16.9809
+margin_top = 54.3389
+margin_right = 185.981
+margin_bottom = 119.339
+rect_scale = Vector2( 0.679999, 0.44 )
+text = "En esta mierda de pantalla
+No se pueden poner ni
+créditos"
+
+[node name="Controles" type="Label" parent="."]
+margin_left = 49.3253
+margin_top = 43.8098
+margin_right = 218.325
+margin_bottom = 108.81
+rect_scale = Vector2( 0.679999, 0.44 )
+text = "Click to play"
+
+[node name="Titulo" type="Label" parent="."]
+margin_left = 32.6775
+margin_top = 23.5945
+margin_right = 201.677
+margin_bottom = 88.5945
+rect_scale = Vector2( 2.38956, 1.20199 )
+text = "Título"
+[connection signal="button_down" from="TextureButton" to="." method="_on_TextureButton_button_down"]
