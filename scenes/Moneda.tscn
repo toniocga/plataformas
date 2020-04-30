@@ -30,3 +30,4 @@ playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ASMoneda/Area2D"]
 shape = SubResource( 2 )
+[connection signal="body_entered" from="ASMoneda/Area2D" to="." method="_on_Area2D_body_entered"]
