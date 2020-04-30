@@ -56,7 +56,7 @@ func _physics_process(delta: float) -> void:
 	update_animation(velocity)
 
 func update_animation(velocity: Vector2) -> void:
-	var animation := "idle"
+	var animation := "caminar"
 	
 	if abs(velocity.x) > 10.0:
 #		
