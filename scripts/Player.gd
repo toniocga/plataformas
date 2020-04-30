@@ -49,8 +49,7 @@ func _physics_process(delta: float) -> void:
 			direction_x = left
 
 			if Input.is_action_pressed("ui_up"):
-				snap = false
-				velocity.y = -jump_force
+				salto()
 				
 	var acaba_aterizar := is_on_floor() and not snap
 	if acaba_aterizar:
@@ -71,3 +70,14 @@ func update_animation(velocity: Vector2) -> void:
 		
 	if sprite.animation != animation:
 		sprite.play(animation)
+
+
+func _on_TextureButton_pressed():
+	if snap :
+		salto()
+	pass # Replace with function body.
+	
+func salto():
+	snap = false
+	velocity.y = -jump_force
+	
