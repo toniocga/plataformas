@@ -3,9 +3,9 @@ extends CanvasLayer
 
 #func _ready():
 #	set_process(true)
-func puntos (puntos):
-	$puntuacion.set_text(puntos) 
-#func _process(delta):
+#func puntos (puntos):
+#	$puntuacion.set_text(puntos) 
+##func _process(delta):
 #	get_node("puntuacion").set_text(str(Global.puntuacion))
 #	if Global.vidas == 2:
 #		get_node("vidas/vida1").set_hidden(true)
