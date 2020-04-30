@@ -72,8 +72,7 @@ func update_animation(velocity: Vector2) -> void:
 
 func _on_TextureButton_pressed():
 	bandera_boton_pulsao = false
-	if snap :
-		salto()
+
 	pass # Replace with function body.
 	
 func salto():
@@ -82,4 +81,6 @@ func salto():
 
 func _on_TextureButton_button_down():
 	bandera_boton_pulsao = true
+	if snap :
+		salto()
 	pass # Replace with function body.
