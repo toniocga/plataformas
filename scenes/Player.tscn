@@ -43,3 +43,11 @@ shape = SubResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = -82.0
+margin_top = -48.0
+margin_right = 82.0
+margin_bottom = 48.0
+[connection signal="button_down" from="TextureButton" to="." method="_on_TextureButton_button_down"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
