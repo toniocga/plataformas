@@ -20,6 +20,6 @@ func _physics_process(delta):
 			elif direction_x == right:
 				direction_x = left
 				get_node("AnimatedSprite").set_flip_h(true) 
-				print ("izq")
+				
 	
 	
