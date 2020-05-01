@@ -98,7 +98,8 @@ Usuario 3: A 2 manos
 
 -----------------------------------
 
-### Objetivos alcanzados (aquí vamos pasando las cosas que se ha terminado):
+### Objetivos_alcanzados
+(aquí vamos pasando las cosas que se ha terminado):
 Jose: pruebas de exportación a html del juego
 
 Jose: Base para desarrollar el documento de diseño de juego
