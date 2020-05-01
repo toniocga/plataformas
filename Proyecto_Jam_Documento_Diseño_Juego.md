@@ -1,11 +1,12 @@
 #Indice
-* [Documento de diseño de juego plataformas Godot](#Documento de diseño de juego plataformas Godot)
+* [Documento de diseño de juego plataformas Godot](#Documento_de_diseño)
 * [Estructura del proyecto ](#Estructura_del_proyecto )
 * [Mecánicas](#Mecánicas)
 * [Producción](#Producción)
 * [Objetivos alcanzados](#Objetivos_alcanzados)
 
-### Documento de diseño de juego plataformas Godot
+### Documento_de_diseño 
+juego plataformas Godot
 
 Bueno aquí se va poniendo las historias del proyecto
 
@@ -19,7 +20,7 @@ Juego 2D con un solo botón. El protagonista avanza automáticamente, debe de sa
 
 Hay que ponerlo para movil
 --------------------------------
-### Estructura del proyecto 
+### Estructura_del_proyecto 
 No me gusta la estructura. que los scritp por un lado las escenas en otro las imagenes en otro y asi. Cuando creas un nuevo elemento tienes que subir un archivo aqui otro alli y el otro no se donde y si despues quieres reutilizar algo. Pues te dan por culo!!! por que al proyecto que lo quieras meter no va a tener la misma configuracion. Por lo que propondo hacerlo como lo hemos hecho en otros proyectos que cada elemento este dentro de una carpeta con todas las cosas de ese elemento. 
 Por ejemplo:
 /Player
