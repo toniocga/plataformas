@@ -17,43 +17,63 @@ var velocity := Vector2()
 var left = -0.5
 var right = 0.5
 var direction_x = right
+
+#Cyclo Pi variables
 var bandera_boton_pulsao = false
+onready var gameover = load("res://scenes/Game_over.tscn").instance()
+var bandera_muerto = false
+
 
 func _physics_process(delta: float) -> void:
-#	var direction_x := Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
+	
+	if bandera_muerto == false:
+		
 
-	velocity.x = direction_x * move_speed
-	if not is_on_floor():
-		snap = false
-	if Input.is_action_just_pressed("ui_up") and snap:
-		salto()
-#		audio_player.play()
+#	avance
+		velocity.x = direction_x * move_speed
+	
+	#	game over por límite inferior, esto hay que cambiarlo por game over por areas
+		if position.y > 170:
+#			print(position.y)
+			print("game over por límite inferior, esto hay que cambiarlo por game over por areas")
+			bandera_muerto = true
+			
+#			get_parent().add_child(gameover)
+			add_child(gameover)
+			gameover.set_position(Vector2(-96,-50))
+		
+	#	salto y gravedad	
+		if not is_on_floor():
+			snap = false
+		if Input.is_action_just_pressed("ui_up") and snap:
+			salto()
+	#		audio_player.play()
 	
 	
-	velocity.y += gravity * delta
-
-	var snap_vector = Vector2(0,32) if snap else Vector2()
-	velocity = move_and_slide_with_snap(velocity,snap_vector, Vector2.UP, slope_slide_threshold)
-
-#	if is_on_floor() and (Input.is_action_just_released("move_right") or Input.is_action_just_released("move_left")):
-#		velocity.y = 0
-	if is_on_wall():
-		if direction_x == left:
-			direction_x = right
-			if Input.is_action_pressed("ui_up") or bandera_boton_pulsao:
-				salto()
-				
-		elif direction_x == right:
-			direction_x = left
-
-			if Input.is_action_pressed("ui_up") or bandera_boton_pulsao:
-				salto()
-				
-	var acaba_aterizar := is_on_floor() and not snap
-	if acaba_aterizar:
-		snap = true
+		velocity.y += gravity * delta
 	
-	update_animation(velocity)
+		var snap_vector = Vector2(0,32) if snap else Vector2()
+		velocity = move_and_slide_with_snap(velocity,snap_vector, Vector2.UP, slope_slide_threshold)
+	
+	#	if is_on_floor() and (Input.is_action_just_released("move_right") or Input.is_action_just_released("move_left")):
+	#		velocity.y = 0
+		if is_on_wall():
+			if direction_x == left:
+				direction_x = right
+				if Input.is_action_pressed("ui_up") or bandera_boton_pulsao:
+					salto()
+					
+			elif direction_x == right:
+				direction_x = left
+
+				if Input.is_action_pressed("ui_up") or bandera_boton_pulsao:
+					salto()
+					
+		var acaba_aterizar := is_on_floor() and not snap
+		if acaba_aterizar:
+			snap = true
+		
+		update_animation(velocity)
 
 func update_animation(velocity: Vector2) -> void:
 	var animation := "caminar"
