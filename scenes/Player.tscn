@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://images/player/player-jump-1.png" type="Texture" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://images/player/player-walk-3.png" type="Texture" id=5]
 [ext_resource path="res://images/player/player-walk-4.png" type="Texture" id=6]
 [ext_resource path="res://images/player/player-jump-2.png" type="Texture" id=7]
+[ext_resource path="res://sounds/paso.wav" type="AudioStream" id=8]
+[ext_resource path="res://sounds/salto.wav" type="AudioStream" id=9]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -49,5 +51,12 @@ margin_left = -82.0
 margin_top = -48.0
 margin_right = 82.0
 margin_bottom = 48.0
+
+[node name="AudioPasos" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 8 )
+
+[node name="AudioSalto" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 9 )
 [connection signal="button_down" from="TextureButton" to="." method="_on_TextureButton_button_down"]
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="finished" from="AudioPasos" to="." method="_on_AudioPasos_finished"]
