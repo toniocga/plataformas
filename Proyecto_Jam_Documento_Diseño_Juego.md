@@ -1,4 +1,11 @@
-# Documento de diseño de juego plataformas Godot
+#Indice
+*[Documento de diseño de juego plataformas Godot](# Documento de diseño de juego plataformas Godot)
+*[Estructura del proyecto ](# Estructura del proyecto )
+*[Mecánicas](#Mecánicas)
+*[Producción](# Producción)
+*[Objetivos alcanzados](# Objetivos alcanzados)
+
+### Documento de diseño de juego plataformas Godot
 
 Bueno aquí se va poniendo las historias del proyecto
 
@@ -11,9 +18,21 @@ Juego 2D con un solo botón. El protagonista avanza automáticamente, debe de sa
 ¿cambio de sentido?
 
 Hay que ponerlo para movil
+--------------------------------
+### Estructura del proyecto 
+No me gusta la estructura. que los scritp por un lado las escenas en otro las imagenes en otro y asi. Cuando creas un nuevo elemento tienes que subir un archivo aqui otro alli y el otro no se donde y si despues quieres reutilizar algo. Pues te dan por culo!!! por que al proyecto que lo quieras meter no va a tener la misma configuracion. Por lo que propondo hacerlo como lo hemos hecho en otros proyectos que cada elemento este dentro de una carpeta con todas las cosas de ese elemento. 
+Por ejemplo:
+/Player
+/Player/escenas
+/Player/script
+/Player/imagenes
+Que es parece???
+No digo de hacerlo ahora. Pero si despues del final de la jam
 
+----------------------------------
+# No se como. Pero parece que al poner la almuadilla se crea un enlace al renglon en el que se ha puesto. molaria un indice de esos enlaces al principio del documento
 -----------------------------------
-Mecnánicas:
+###Mecánicas:
 
 Primeramente se deben pasar a Godot 3:
 
@@ -61,7 +80,7 @@ Sacar html para ichio
 
 -----------------------------------
 
-## Producción (aquí vamos pasando las cosas que se van haciendo):
+### Producción (aquí vamos pasando las cosas que se van haciendo):
 
 Jose: Repaso de errores para adapatación a Godot 3D
 
@@ -70,6 +89,7 @@ Bravo: lo que le da la gana, pon aquí lo que estás haciendo +  abajo lo que ha
 Ksk: - Arreglo de tileset
      - Redimensionado del proyecto 
      - Ajustar background level_0
+     - añado enemigo_01 (no mata solo molesta al chocar con el)
 
 Usuario 2: tocandose los ...
 
@@ -77,7 +97,7 @@ Usuario 3: A 2 manos
 
 -----------------------------------
 
-## Objetivos alcanzados (aquí vamos pasando las cosas que se ha terminado):
+### Objetivos alcanzados (aquí vamos pasando las cosas que se ha terminado):
 Jose: pruebas de exportación a html del juego
 
 Jose: Base para desarrollar el documento de diseño de juego
