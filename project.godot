@@ -25,9 +25,10 @@ Global="*res://scripts/Global.gd"
 
 [display]
 
-window/size/width=160
-window/size/height=92
-window/stretch/mode="viewport"
+window/size/width=480
+window/size/height=276
+window/stretch/aspect="keep"
+window/stretch/shrink=3.0
 
 [rendering]
 
