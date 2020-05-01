@@ -1,9 +1,9 @@
 #Indice
-* [Documento de diseño de juego plataformas Godot](#"Documento de diseño de juego plataformas Godot")
+* [Documento de diseño de juego plataformas Godot](#Documento de diseño de juego plataformas Godot)
 * [Estructura del proyecto ](#Estructura del proyecto )
 * [Mecánicas](#Mecánicas)
 * [Producción](#Producción)
-* [Objetivos alcanzados](#Objetivos alcanzados)
+* [Objetivos alcanzados](#Objetivos_alcanzados)
 
 ### Documento de diseño de juego plataformas Godot
 
