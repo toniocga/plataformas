@@ -92,10 +92,11 @@ Jose: Repaso de errores para adapatación a Godot 3D
 
 Bravo: lo que le da la gana, pon aquí lo que estás haciendo +  abajo lo que has terminado
 
-Ksk: - Arreglo de tileset
-     - Redimensionado del proyecto 
-     - Ajustar background level_0
-     - añado enemigo_01 (no mata solo molesta al chocar con el)
+Ksk: 
+* Arreglo de tileset
+* Redimensionado del proyecto 
+* Ajustar background level_0
+* añado enemigo_01 (no mata solo molesta al chocar con el)
 
 Usuario 2: tocandose los ...
 
