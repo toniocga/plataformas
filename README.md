@@ -11,6 +11,15 @@ Nuestro DOcumento de Diseño de Juego (Pasicos que vamos dando):
 https://github.com/CycloPiStudio/plataformas/blob/master/Proyecto_Jam_Documento_Dise%C3%B1o_Juego.md
 
 -------------------------------------------
+# Licences
+
+salto
+
+http://www.superluigibros.com/downloads/sounds/SNES/SMRPG/wav/smrpg_mario_jump.wav
+
+(from http://FindSounds.com)
+
+-------------------------------------------
 
 ## Welcome to Cyclo 𝛑 Studio
 
