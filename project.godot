@@ -19,6 +19,10 @@ config/name="plataformas"
 run/main_scene="res://scenes/Menu_entrar.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://scripts/Global.gd"
+
 [display]
 
 window/size/width=160
