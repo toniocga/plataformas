@@ -32,7 +32,7 @@ No digo de hacerlo ahora. Pero si despues del final de la jam
 ----------------------------------
 # No se como. Pero parece que al poner la almuadilla se crea un enlace al renglon en el que se ha puesto. molaria un indice de esos enlaces al principio del documento
 -----------------------------------
-###Mecánicas:
+### Mecánicas:
 
 Primeramente se deben pasar a Godot 3:
 
@@ -80,7 +80,8 @@ Sacar html para ichio
 
 -----------------------------------
 
-### Producción (aquí vamos pasando las cosas que se van haciendo):
+### Producción
+(aquí vamos pasando las cosas que se van haciendo):
 
 Jose: Repaso de errores para adapatación a Godot 3D
 
