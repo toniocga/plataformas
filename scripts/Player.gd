@@ -73,6 +73,7 @@ func _physics_process(delta: float) -> void:
 		var acaba_aterizar := is_on_floor() and not snap
 		if acaba_aterizar:
 			snap = true
+			bandera_sonido_pasos = true
 		
 		update_animation(velocity)
 
@@ -110,5 +111,6 @@ func salto():
 
 
 func _on_AudioPasos_finished():
-	bandera_sonido_pasos = true
+	if snap :
+		bandera_sonido_pasos = true
 	pass # Replace with function body.
