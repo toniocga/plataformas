@@ -22,6 +22,7 @@ var direction_x = right
 var bandera_boton_pulsao = false
 onready var gameover = load("res://scenes/Game_over.tscn").instance()
 var bandera_muerto = false
+var bandera_sonido_pasos = true
 
 
 func _physics_process(delta: float) -> void:
@@ -82,6 +83,10 @@ func update_animation(velocity: Vector2) -> void:
 #		
 		sprite.flip_h = velocity.x < 0
 		animation = "caminar"
+		if bandera_sonido_pasos:
+			bandera_sonido_pasos = false
+			get_node("AudioPasos").play()
+			
 
 	if not is_on_floor():
 		animation = "saltar" if velocity.y < 0 else "caer"
@@ -92,15 +97,18 @@ func update_animation(velocity: Vector2) -> void:
 
 func _on_TextureButton_pressed():
 	bandera_boton_pulsao = false
-
-	pass # Replace with function body.
 	
-func salto():
-	snap = false
-	velocity.y = -jump_force
-
 func _on_TextureButton_button_down():
 	bandera_boton_pulsao = true
 	if snap :
 		salto()
+	
+func salto():
+	snap = false
+	velocity.y = -jump_force
+	get_node("AudioSalto").play()
+
+
+func _on_AudioPasos_finished():
+	bandera_sonido_pasos = true
 	pass # Replace with function body.
