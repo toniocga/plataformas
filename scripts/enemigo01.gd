@@ -16,7 +16,10 @@ func _physics_process(delta):
 	if is_on_wall():
 			if direction_x == left:
 				direction_x = right
+				get_node("AnimatedSprite").set_flip_h(false) 
 			elif direction_x == right:
 				direction_x = left
+				get_node("AnimatedSprite").set_flip_h(true) 
+				print ("izq")
 	
 	
