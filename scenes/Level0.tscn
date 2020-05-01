@@ -33,7 +33,7 @@ __meta__ = {
 }
 
 [node name="Puerta_salida" parent="." instance=ExtResource( 3 )]
-position = Vector2( 133.978, 64.3238 )
+position = Vector2( 348.681, 76.0975 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 23.2355, 27.5584 )
