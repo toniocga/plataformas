@@ -15,7 +15,13 @@ func _ready():
 
 
 func _on_Area2D_body_entered(body):
-	if body.get_name() == "Player":
+	if body.get_name() == "Player" and Global.nivel ==0 :
+		print("pbody," , body.bandera_muerto)
+		body.bandera_muerto = true
+		add_child(win)
+		win.set_position(Vector2(-96,-50))
+		
+	if body.get_name() == "Player" and Global.nivel ==1 :
 		print("pbody," , body.bandera_muerto)
 		body.bandera_muerto = true
 		add_child(win)

@@ -10,8 +10,7 @@ func _ready():
 	pass # Replace with function body.
 
 func _on_TextureButton_button_down():
-	print("picncho")
-	
+	Global.nivel = 0
 	get_node("/root").add_child(nivel0)
 	queue_free()
 	
