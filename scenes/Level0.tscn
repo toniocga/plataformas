@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scripts/Level0.gd" type="Script" id=1]
 [ext_resource path="res://images/fondos/fondo-verde-1.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://scenes/Moneda.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/HUD.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/enemigo01.tscn" type="PackedScene" id=8]
+[ext_resource path="res://sounds/Sampler_Nivel_1.wav" type="AudioStream" id=9]
 
 [node name="Level" type="Node2D"]
 script = ExtResource( 1 )
@@ -63,3 +64,7 @@ position = Vector2( 82.1348, 52.4149 )
 
 [node name="Enemigo_01" parent="." instance=ExtResource( 8 )]
 position = Vector2( 83.2153, 50.2534 )
+
+[node name="AudioMusica" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 9 )
+autoplay = true

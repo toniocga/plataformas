@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scripts/Level0.gd" type="Script" id=1]
 [ext_resource path="res://images/fondos/fondo-verde-1.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scenes/Puerta_salida.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/Moneda.tscn" type="PackedScene" id=6]
+[ext_resource path="res://sounds/Sampler_Nivel_1.wav" type="AudioStream" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -52,3 +53,7 @@ position = Vector2( 278.918, 35.0893 )
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "0"
+
+[node name="AudioMusica" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
