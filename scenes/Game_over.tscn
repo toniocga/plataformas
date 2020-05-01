@@ -31,7 +31,7 @@ tile_data = PoolIntArray( -1, 14, 0, -65536, 14, 0, -65535, 14, 0, -65534, 14, 0
 wait_time = 3.0
 autostart = true
 
-[node name="AudioGameOver" type="AudioStreamPlayer" parent="."]
+[node name="AudioGameOver" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
 autoplay = true
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
