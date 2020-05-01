@@ -67,6 +67,10 @@ Jose: Repaso de errores para adapatación a Godot 3D
 
 Bravo: lo que le da la gana, pon aquí lo que estás haciendo +  abajo lo que has terminado
 
+Ksk: - Arreglo de tileset
+     - Redimensionado del proyecto 
+     - Ajustar background level_0
+
 Usuario 2: tocandose los ...
 
 Usuario 3: A 2 manos
