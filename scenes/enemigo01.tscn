@@ -6,9 +6,8 @@
 [ext_resource path="res://images/Enemigos/enemigo_01/enemigo_01.3.png" type="Texture" id=4]
 [ext_resource path="res://images/Enemigos/enemigo_01/enemigo_01.4.png" type="Texture" id=5]
 
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 6.80395
-height = 2.74836
+[sub_resource type="CircleShape2D" id=1]
+radius = 16.0179
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -27,5 +26,4 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
 animation = "caminar"
-frame = 2
 playing = true
