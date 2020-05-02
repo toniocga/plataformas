@@ -1,26 +1,26 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scripts/Player.gd" type="Script" id=1]
-[ext_resource path="res://images/player/player-jump-1.png" type="Texture" id=2]
-[ext_resource path="res://images/player/player-walk-1.png" type="Texture" id=3]
-[ext_resource path="res://images/player/player-walk-2.png" type="Texture" id=4]
-[ext_resource path="res://images/player/player-walk-3.png" type="Texture" id=5]
-[ext_resource path="res://images/player/player-walk-4.png" type="Texture" id=6]
+[ext_resource path="res://images/player/player-walk-1.png" type="Texture" id=2]
+[ext_resource path="res://images/player/player-walk-2.png" type="Texture" id=3]
+[ext_resource path="res://images/player/player-walk-3.png" type="Texture" id=4]
+[ext_resource path="res://images/player/player-walk-4.png" type="Texture" id=5]
+[ext_resource path="res://images/player/player-jump-1.png" type="Texture" id=6]
 [ext_resource path="res://images/player/player-jump-2.png" type="Texture" id=7]
 [ext_resource path="res://sounds/paso.wav" type="AudioStream" id=8]
 [ext_resource path="res://sounds/salto.wav" type="AudioStream" id=9]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ) ],
-"loop": false,
-"name": "saltar",
-"speed": 4.0
-}, {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "caminar",
 "speed": 12.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": false,
+"name": "saltar",
+"speed": 4.0
 }, {
 "frames": [ ExtResource( 7 ) ],
 "loop": true,
@@ -29,7 +29,7 @@ animations = [ {
 } ]
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 7.90033
+radius = 24.8566
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
