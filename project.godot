@@ -28,7 +28,6 @@ Global="*res://scripts/Global.gd"
 window/size/width=480
 window/size/height=276
 window/stretch/aspect="keep"
-window/stretch/shrink=3.0
 
 [rendering]
 
