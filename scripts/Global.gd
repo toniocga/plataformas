@@ -5,5 +5,5 @@ var vidas = 3
 var nivel = 0
 
 func _ready():
-	print("puntuación: ", puntuacion, ", vidas: ", vidas)
+	print("puntuación: ", puntuacion, ", vidas: ", vidas , ", nivel", nivel)
 	pass
