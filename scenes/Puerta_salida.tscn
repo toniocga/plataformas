@@ -4,7 +4,7 @@
 [ext_resource path="res://images/puerta/puerta32x32.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 16.3185
+radius = 34.5611
 
 [node name="Puerta_salida" type="Node2D"]
 script = ExtResource( 1 )
