@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scripts/Menu_entrar.gd" type="Script" id=1]
 [ext_resource path="res://src/tileset-escenario.tres" type="TileSet" id=2]
 [ext_resource path="res://fonts/FuturaRenner-master/FuturaRenner-Regular.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://images/fondos/titulo.png" type="Texture" id=4]
-[ext_resource path="res://sounds/Sampler_Nivel_1.wav" type="AudioStream" id=5]
+[ext_resource path="res://images/player/player-jump-1.png" type="Texture" id=4]
+[ext_resource path="res://images/fondos/titulo.png" type="Texture" id=5]
+[ext_resource path="res://sounds/Sampler_Nivel_1.wav" type="AudioStream" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 25
@@ -36,11 +37,16 @@ custom_fonts/font = SubResource( 1 )
 text = "Título"
 align = 1
 
-[node name="titulo" type="Sprite" parent="."]
-position = Vector2( 241.749, 159.727 )
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 340.326, 94.0495 )
+scale = Vector2( 2, 2 )
 texture = ExtResource( 4 )
 
+[node name="titulo" type="Sprite" parent="."]
+position = Vector2( 220.778, 145.306 )
+texture = ExtResource( 5 )
+
 [node name="Musica" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 5 )
+stream = ExtResource( 6 )
 autoplay = true
 [connection signal="button_down" from="TextureButton" to="." method="_on_TextureButton_button_down"]
