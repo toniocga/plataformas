@@ -11,27 +11,31 @@
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 27.4061 ]
+}
 
 [node name="score" type="Label" parent="."]
-margin_right = 6.0
-margin_bottom = 1.0
+margin_left = 0.263519
+margin_right = 34.2635
+margin_bottom = 13.0
 custom_fonts/font = SubResource( 1 )
 text = "SCORE:"
 
 [node name="vidas" type="Node2D" parent="."]
 
 [node name="vida1" type="Sprite" parent="vidas"]
-position = Vector2( 27.8944, 5.2302 )
+position = Vector2( 13.1373, 18.1427 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 2 )
 
 [node name="vida2" type="Sprite" parent="vidas"]
-position = Vector2( 39.3234, 5.03649 )
+position = Vector2( 27.992, 17.949 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 2 )
 
 [node name="vida3" type="Sprite" parent="vidas"]
-position = Vector2( 48.9906, 5.07161 )
+position = Vector2( 43.9837, 17.7206 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 2 )
 
@@ -51,10 +55,13 @@ normal = ExtResource( 5 )
 action = "ui_up"
 
 [node name="Monedas" type="Sprite" parent="."]
-position = Vector2( 10.4604, 4.06794 )
+position = Vector2( 78.7121, 18.0345 )
 scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 6 )
 
 [node name="puntuacion" type="Label" parent="."]
-margin_right = 40.0
-margin_bottom = 14.0
+margin_left = 93.747
+margin_top = 12.3299
+margin_right = 133.747
+margin_bottom = 26.3299
+text = "0"
