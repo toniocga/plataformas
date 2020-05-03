@@ -115,5 +115,5 @@ func morir():
 			
 #	get_parent().add_child(gameover)
 	add_child(gameover)
-	gameover.set_position(Vector2(-96,-50))
+#	gameover.set_position(get_position())
 	pass
