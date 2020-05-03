@@ -20,12 +20,12 @@ position = Vector2( -104.83, -104.83 )
 scale = Vector2( 1, 2 )
 
 [node name="fondo" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 30.4294, 22.5795 )
-scale = Vector2( 1.58666, 0.88758 )
+position = Vector2( -120.956, -36.8808 )
+scale = Vector2( 2.63808, 1.47574 )
 texture = ExtResource( 2 )
 centered = false
 region_enabled = true
-region_rect = Rect2( 0, 0, 480, 144 )
+region_rect = Rect2( 0, 0, 668.24, 144 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 3 )
