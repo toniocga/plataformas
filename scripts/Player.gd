@@ -29,19 +29,14 @@ func _physics_process(delta: float) -> void:
 	
 	if bandera_muerto == false:
 		
-
+	
 #	avance
 		velocity.x = direction_x * move_speed
 	
 	#	game over por límite inferior, esto hay que cambiarlo por game over por areas
 		if position.y > 170:
 #			print(position.y)
-			print("game over por límite inferior, esto hay que cambiarlo por game over por areas")
-			bandera_muerto = true
-			
-#			get_parent().add_child(gameover)
-			add_child(gameover)
-			gameover.set_position(Vector2(-96,-50))
+			morir()	
 		
 	#	salto y gravedad	
 		if not is_on_floor():
@@ -114,3 +109,11 @@ func _on_AudioPasos_finished():
 	if snap :
 		bandera_sonido_pasos = true
 	pass # Replace with function body.
+func morir():
+	print("game over por límite inferior, esto hay que cambiarlo por game over por areas")
+	bandera_muerto = true
+			
+#	get_parent().add_child(gameover)
+	add_child(gameover)
+	gameover.set_position(Vector2(-96,-50))
+	pass

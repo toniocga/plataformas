@@ -1,5 +1,5 @@
 extends KinematicBody2D
-
+onready var nodoPlayer = get_tree().get_root().get_node("Level/Player")
 var left = -5
 var right = 5
 var direction_x = right
@@ -23,3 +23,10 @@ func _physics_process(delta):
 				
 	
 	
+
+
+func _on_Area2Denemigo_body_entered(body):
+	
+	if body.name == "Player":
+		body.morir()
+		
