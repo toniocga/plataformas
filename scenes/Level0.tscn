@@ -73,10 +73,22 @@ position = Vector2( 266.287, 133.011 )
 [node name="Moneda4" parent="." instance=ExtResource( 6 )]
 position = Vector2( 110.767, 39.1465 )
 
+[node name="Moneda6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 767.83, -29.5516 )
+
+[node name="Moneda7" parent="." instance=ExtResource( 6 )]
+position = Vector2( 715.753, -61.6845 )
+
+[node name="Moneda8" parent="." instance=ExtResource( 6 )]
+position = Vector2( 655.707, -60.3487 )
+
+[node name="Moneda9" parent="." instance=ExtResource( 6 )]
+position = Vector2( 604.95, -25.1195 )
+
 [node name="HUD" parent="." instance=ExtResource( 7 )]
 
 [node name="Enemigo_01" parent="." instance=ExtResource( 8 )]
-position = Vector2( 451.996, 143.8 )
+position = Vector2( 548.293, 137.184 )
 
 [node name="AudioMusica" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 9 )
