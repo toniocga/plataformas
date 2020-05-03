@@ -12,13 +12,10 @@ func _ready():
 
 func _on_Area2D_body_entered(body):
 	if body.get_name() == "Player":
-		
 		Global.puntuacion += 1
 		nodolabelpuntos.set_text(str(Global.puntuacion)) 
-		print(nodolabelpuntos.name)
-		self.queue_free()
-#		print (Global.puntuacion)
-		
+		hide()
+		$AudioStreamPlayer2D.play()
 
-
-
+func _on_AudioStreamPlayer2D_finished():
+	self.queue_free()
