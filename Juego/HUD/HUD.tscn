@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Juego/HUD/HUD.gd" type="Script" id=1]
+[ext_resource path="res://Juego/HUD/Imgs/player-walk-1.png" type="Texture" id=2]
+[ext_resource path="res://Juego/HUD/Imgs/botones/boton-izq.png" type="Texture" id=3]
+[ext_resource path="res://Juego/HUD/Imgs/botones/boton-der.png" type="Texture" id=4]
+[ext_resource path="res://Juego/HUD/Imgs/botones/boton-salto.png" type="Texture" id=5]
+[ext_resource path="res://Juego/HUD/Imgs/moneda-1.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 27.4061 ]
+}
+
+[node name="score" type="Label" parent="."]
+margin_left = 0.263519
+margin_right = 34.2635
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 1 )
+text = "SCORE:"
+
+[node name="vidas" type="Node2D" parent="."]
+
+[node name="vida1" type="Sprite" parent="vidas"]
+position = Vector2( 13.1373, 18.1427 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="vida2" type="Sprite" parent="vidas"]
+position = Vector2( 27.992, 17.949 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="vida3" type="Sprite" parent="vidas"]
+position = Vector2( 43.9837, 17.7206 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="touch" type="Node2D" parent="."]
+visible = false
+
+[node name="boton-izq" type="TouchScreenButton" parent="touch"]
+normal = ExtResource( 3 )
+action = "ui_left"
+
+[node name="boton-der" type="TouchScreenButton" parent="touch"]
+normal = ExtResource( 4 )
+action = "ui_right"
+
+[node name="boton-salto" type="TouchScreenButton" parent="touch"]
+normal = ExtResource( 5 )
+action = "ui_up"
+
+[node name="Monedas" type="Sprite" parent="."]
+position = Vector2( 78.7121, 18.0345 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 6 )
+
+[node name="puntuacion" type="Label" parent="."]
+margin_left = 93.747
+margin_top = 12.3299
+margin_right = 133.747
+margin_bottom = 26.3299
+text = "0"

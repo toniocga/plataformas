@@ -1,0 +1,250 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://recursos/Arte/arcade_platformerV2_alpha.png" type="Texture" id=1]
+
+[node name="Escenario" type="Node2D"]
+
+[node name="suelo-centro" type="Sprite" parent="."]
+editor/display_folded = true
+texture = ExtResource( 1 )
+centered = false
+region_rect = Rect2( 224, 48, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="suelo-centro"]
+editor/display_folded = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo-centro/StaticBody2D"]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[node name="suelo-izq" type="Sprite" parent="."]
+editor/display_folded = true
+texture = ExtResource( 1 )
+centered = false
+region_rect = Rect2( 208, 48, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="suelo-izq"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo-izq/StaticBody2D"]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[node name="suelo-der" type="Sprite" parent="."]
+editor/display_folded = true
+texture = ExtResource( 1 )
+centered = false
+region_rect = Rect2( 240, 48, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="suelo-der"]
+editor/display_folded = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo-der/StaticBody2D"]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[node name="suelo-elev-der" type="Sprite" parent="."]
+editor/display_folded = true
+texture = ExtResource( 1 )
+centered = false
+region_rect = Rect2( 240, 64, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="suelo-elev-der"]
+editor/display_folded = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo-elev-der/StaticBody2D"]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[node name="suelo-elev-centro" type="Sprite" parent="."]
+editor/display_folded = true
+texture = ExtResource( 1 )
+centered = false
+region_rect = Rect2( 224, 64, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="suelo-elev-centro"]
+editor/display_folded = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo-elev-centro/StaticBody2D"]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[node name="suelo-elev-izq" type="Sprite" parent="."]
+editor/display_folded = true
+texture = ExtResource( 1 )
+centered = false
+region_rect = Rect2( 208, 64, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="suelo-elev-izq"]
+editor/display_folded = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo-elev-izq/StaticBody2D"]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[node name="suelo-elev-izq-tierra" type="Sprite" parent="."]
+editor/display_folded = true
+texture = ExtResource( 1 )
+centered = false
+region_rect = Rect2( 208, 80, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="suelo-elev-izq-tierra"]
+editor/display_folded = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo-elev-izq-tierra/StaticBody2D"]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[node name="suelo-elev-centro-tierra" type="Sprite" parent="."]
+editor/display_folded = true
+texture = ExtResource( 1 )
+centered = false
+region_rect = Rect2( 224, 80, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="suelo-elev-centro-tierra"]
+editor/display_folded = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo-elev-centro-tierra/StaticBody2D"]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[node name="suelo-elev-der-tierra" type="Sprite" parent="."]
+editor/display_folded = true
+texture = ExtResource( 1 )
+centered = false
+region_rect = Rect2( 240, 80, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="suelo-elev-der-tierra"]
+editor/display_folded = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo-elev-der-tierra/StaticBody2D"]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[node name="suelo-bloque-alto" type="Sprite" parent="."]
+editor/display_folded = true
+texture = ExtResource( 1 )
+centered = false
+region_rect = Rect2( 256, 96, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="suelo-bloque-alto"]
+editor/display_folded = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo-bloque-alto/StaticBody2D"]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[node name="suelo-bloque-alto-tierra" type="Sprite" parent="."]
+editor/display_folded = true
+texture = ExtResource( 1 )
+centered = false
+region_rect = Rect2( 256, 112, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="suelo-bloque-alto-tierra"]
+editor/display_folded = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo-bloque-alto-tierra/StaticBody2D"]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[node name="suelo-bloque-simple" type="Sprite" parent="."]
+editor/display_folded = true
+texture = ExtResource( 1 )
+centered = false
+region_rect = Rect2( 256, 80, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="suelo-bloque-simple"]
+editor/display_folded = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo-bloque-simple/StaticBody2D"]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[node name="ladrillo-peqeno-marron" type="Sprite" parent="."]
+editor/display_folded = true
+texture = ExtResource( 1 )
+centered = false
+region_rect = Rect2( 48, 112, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ladrillo-peqeno-marron"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ladrillo-peqeno-marron/StaticBody2D"]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 8, 0, 8 )
+
+[node name="ladrillo-grande-marron" type="Sprite" parent="."]
+editor/display_folded = true
+texture = ExtResource( 1 )
+centered = false
+region_rect = Rect2( 32, 112, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ladrillo-grande-marron"]
+editor/display_folded = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ladrillo-grande-marron/StaticBody2D"]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[node name="bloque-grande-naranja" type="Sprite" parent="."]
+editor/display_folded = true
+texture = ExtResource( 1 )
+centered = false
+region_rect = Rect2( 176, 128, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="bloque-grande-naranja"]
+editor/display_folded = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="bloque-grande-naranja/StaticBody2D"]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[node name="bloque-pequeno-naranja" type="Sprite" parent="."]
+editor/display_folded = true
+texture = ExtResource( 1 )
+centered = false
+region_rect = Rect2( 192, 128, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="bloque-pequeno-naranja"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="bloque-pequeno-naranja/StaticBody2D"]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 8, 0, 8 )
+
+[node name="pasarela-marron" type="Sprite" parent="."]
+editor/display_folded = true
+texture = ExtResource( 1 )
+centered = false
+region_rect = Rect2( 320, 48, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="pasarela-marron"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pasarela-marron/StaticBody2D"]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 8, 0, 8 )
+
+[node name="pasarela-azul" type="Sprite" parent="."]
+editor/display_folded = true
+texture = ExtResource( 1 )
+centered = false
+region_rect = Rect2( 256, 48, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="pasarela-azul"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pasarela-azul/StaticBody2D"]
+polygon = PoolVector2Array( 0, 0, 16, 0, 16, 8, 0, 8 )
+
+[node name="arbol" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_rect = Rect2( 208, 0, 16, 16 )
+
+[node name="arbol1" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_rect = Rect2( 224, 0, 16, 16 )
+
+[node name="arbol2" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_rect = Rect2( 240, 0, 16, 16 )
+
+[node name="arbol3" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_rect = Rect2( 208, 16, 16, 16 )
+
+[node name="arbol4" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_rect = Rect2( 224, 16, 16, 16 )
+
+[node name="arbol5" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_rect = Rect2( 240, 16, 16, 16 )
+
+[node name="arbol6" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 1 )
+region_rect = Rect2( 224, 32, 16, 16 )
+
+[node name="arbusto" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 1 )
+region_rect = Rect2( 256, 64, 16, 16 )
