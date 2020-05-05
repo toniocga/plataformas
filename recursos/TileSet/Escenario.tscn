@@ -293,6 +293,18 @@ region_rect = Rect2( 288, 288, 32, 32 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="piramidal_verde/StaticBody2D"]
 polygon = PoolVector2Array( -16, -16, 16, -16, 16, 16, -16, 16 )
 
+[node name="piramidal_azul" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 16, 16 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 352, 288, 32, 32 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="piramidal_azul"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="piramidal_azul/StaticBody2D"]
+polygon = PoolVector2Array( -16, -16, 16, -16, 16, 16, -16, 16 )
+
 [node name="pasarela_ladrillo_rojo" type="Sprite" parent="."]
 editor/display_folded = true
 texture = ExtResource( 1 )
