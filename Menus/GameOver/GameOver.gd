@@ -8,6 +8,7 @@ onready var MenuPrincipal = load("res://Menus/MenuPrincipal/MenuPrincipal.tscn")
 #	pass # Replace with function body.
 
 func _on_Timer_timeout():
+	Global.puntuacion = 0
 	print(get_parent().get_parent().name)
 	get_node("/root").add_child(MenuPrincipal)
 	get_parent().get_parent().queue_free()
