@@ -14,7 +14,7 @@ func _on_Timer_timeout():
 	if Global.nivel == 0:
 
 		get_node("/root").add_child(nivel1)
-		Global.nivel = 0
+		Global.nivel += 1
 		get_parent().get_parent().queue_free()
 	
 	elif Global.nivel == 1: # final
