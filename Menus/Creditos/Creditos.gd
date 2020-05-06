@@ -1,6 +1,6 @@
 extends Node2D
 
-onready var inicio = load("res://scenes/Menu_entrar.tscn").instance()
+onready var inicio = load("res://Menus/MenuPrincipal/MenuPrincipal.tscn").instance()
 # Called when the node enters the scene tree for the first time.
 #func _ready():
 #
