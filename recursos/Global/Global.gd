@@ -1,7 +1,8 @@
 extends Node
 
+var vidasIniciales = 3
 var puntuacion = 0
-var vidas = 3
+var vidas = vidasIniciales
 var nivel = 0
 
 func _ready():
