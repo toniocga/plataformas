@@ -22,6 +22,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Global="*res://recursos/Global/Global.gd"
+Global_cambiar_nivel="*res://recursos/Global/Global_cambiar_nivel.gd"
 
 [display]
 
