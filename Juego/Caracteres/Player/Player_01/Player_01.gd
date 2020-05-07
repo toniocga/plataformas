@@ -109,12 +109,21 @@ func _on_AudioPasos_finished():
 	if snap :
 		bandera_sonido_pasos = true
 	pass # Replace with function body.
+	
 func morir():
+	quitar_vida()
 #	print("game over por límite inferior, esto hay que cambiarlo por game over por areas")
 #	bandera_muerto = true
 	Global.puntuacion = 0	
 #	get_parent().add_child(gameover)
 #	add_child(gameover)
 #	gameover.set_position(get_position())
-	Global_cambiar_nivel.goto_scene("res://Menus/GameOver/GameOver.tscn")
+#	Global_cambiar_nivel.goto_scene("res://Menus/GameOver/GameOver.tscn")
 	pass
+	
+func quitar_vida():
+	if Global.vidas > 0:
+		Global.vidas -= 1
+		Global_cambiar_nivel.goto_scene(get_parent().filename)
+	if Global.vidas == 0:
+		Global_cambiar_nivel.goto_scene("res://Menus/GameOver/GameOver.tscn")
