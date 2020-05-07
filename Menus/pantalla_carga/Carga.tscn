@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Menus/pantalla_carga/Carga.gd" type="Script" id=1]
+[ext_resource path="res://Juego/Caracteres/Player/Player_01/Imgs/player-walk-1.png" type="Texture" id=2]
+[ext_resource path="res://Juego/Caracteres/Player/Player_01/Imgs/player-walk-2.png" type="Texture" id=3]
+[ext_resource path="res://Juego/Caracteres/Player/Player_01/Imgs/player-walk-3.png" type="Texture" id=4]
+[ext_resource path="res://Juego/Caracteres/Player/Player_01/Imgs/player-walk-4.png" type="Texture" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "carga",
+"speed": 5.0
+} ]
+
+[node name="Carga" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 1.0
+margin_top = -1.0
+margin_right = 478.0
+margin_bottom = 273.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 168.822, 140.183 )
+frames = SubResource( 1 )
+animation = "carga"
+playing = true
+
+[node name="Label_level" type="Label" parent="."]
+margin_left = 205.0
+margin_top = 132.0
+margin_right = 245.0
+margin_bottom = 149.0
+text = "Level:"
+
+[node name="num_level" type="Label" parent="."]
+margin_left = 254.638
+margin_top = 131.098
+margin_right = 294.638
+margin_bottom = 148.098
+text = "0
+"
