@@ -125,5 +125,5 @@ func quitar_vida():
 	if Global.vidas > 0:
 		Global.vidas -= 1
 		Global_cambiar_nivel.goto_scene(get_parent().filename)
-	if Global.vidas == 0:
+	elif Global.vidas == 0:
 		Global_cambiar_nivel.goto_scene("res://Menus/GameOver/GameOver.tscn")
