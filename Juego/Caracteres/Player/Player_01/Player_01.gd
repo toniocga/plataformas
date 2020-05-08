@@ -20,7 +20,7 @@ var direction_x = right
 
 #Cyclo Pi variables
 var bandera_boton_pulsao = false
-#onready var gameover = load("res://Menus/GameOver/GameOver.tscn").instance()
+onready var gameover = load("res://Menus/GameOver/GameOver.tscn").instance()
 var bandera_muerto = false
 var bandera_sonido_pasos = true
 
@@ -111,12 +111,12 @@ func _on_AudioPasos_finished():
 	pass # Replace with function body.
 	
 func morir():
+	bandera_muerto = true
+	Global.puntuacion = 0
+	
 	quitar_vida()
 #	print("game over por límite inferior, esto hay que cambiarlo por game over por areas")
-#	bandera_muerto = true
-	Global.puntuacion = 0	
-#	get_parent().add_child(gameover)
-#	add_child(gameover)
+
 #	gameover.set_position(get_position())
 #	Global_cambiar_nivel.goto_scene("res://Menus/GameOver/GameOver.tscn")
 	pass
@@ -124,9 +124,11 @@ func morir():
 func quitar_vida():
 	if Global.vidas > 1:
 		Global.vidas -= 1
-		Global_cambiar_nivel.wait_frames = 20
+#		Global_cambiar_nivel.wait_frames = 20
 		Global_cambiar_nivel.goto_scene(get_parent().filename)
 	elif Global.vidas <= 1 :
 		Global.vidas -= 1
-		Global_cambiar_nivel.wait_frames = 0
-		Global_cambiar_nivel.goto_scene("res://Menus/GameOver/GameOver.tscn")
+#		Global_cambiar_nivel.wait_frames = 0
+#		Global_cambiar_nivel.goto_scene("res://Menus/GameOver/GameOver.tscn")
+		get_parent().add_child(gameover)
+		add_child(gameover)
