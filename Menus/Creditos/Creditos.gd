@@ -1,10 +1,17 @@
 extends Node2D
 
-#onready var inicio = load("res://Menus/MenuPrincipal/MenuPrincipal.tscn").instance()
-# Called when the node enters the scene tree for the first time.
-#func _ready():
-#
-#	pass # Replace with function body.
+func _process(delta):
+	get_node("Creditos").text = leer()
+	
+func leer():
+	var file = File.new()
+	if not file.file_exists("res://Menus/Creditos/Texto/Licencias.txt"):
+		return "No se puede acceder \al archivo de Licencias"
+	file.open("res://Menus/Creditos/Texto/Licencias.txt",file.READ)
+	var data = file.get_as_text()
+	file.close()
+	return data
+	
 
 func _on_Timer_timeout():
 #	no entra
