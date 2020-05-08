@@ -131,4 +131,4 @@ func quitar_vida():
 #		Global_cambiar_nivel.wait_frames = 0
 #		Global_cambiar_nivel.goto_scene("res://Menus/GameOver/GameOver.tscn")
 		get_parent().add_child(gameover)
-		add_child(gameover)
+#		add_child(gameover)
