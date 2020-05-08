@@ -3,7 +3,7 @@ extends Node2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-onready var nivel1 = load("res://Juego/Escenarios/Niveles/Nivel_1/Nivel_1.tscn").instance()
+#onready var nivel1 = load("res://Juego/Escenarios/Niveles/Nivel_1/Nivel_1.tscn").instance()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
