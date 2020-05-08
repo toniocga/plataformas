@@ -1,4 +1,12 @@
-#Indice
+### Game Jam
+
+09-05-2020 Jam Chill 
+
+https://itch.io/jam/rigid-jam-10
+
+
+-----------------------------------
+## Indice Documento_de_diseño 
 * [Documento de diseño de juego plataformas Godot](#Documento_de_diseño)
 * [Estructura del proyecto ](#Estructura_del_proyecto )
 * [Mecánicas](#Mecánicas)
