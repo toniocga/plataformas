@@ -1,7 +1,10 @@
 extends Node2D
 
-func _process(delta):
+func _ready():
 	get_node("Creditos").text = leer()
+	
+#func _process(delta):
+#	get_node("Creditos").text = leer()
 	
 func leer():
 	var file = File.new()
