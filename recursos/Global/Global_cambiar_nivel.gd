@@ -1,7 +1,7 @@
 extends Node
 #var pant_carga
 var loader
-var wait_frames
+var wait_frames = 20
 var time_max = 100 # msec
 var current_scene
 onready var escena_carga
@@ -25,7 +25,7 @@ func goto_scene(path): # game requests to switch to this scene
 	
 #	node("animation").play("carga")
 	
-	wait_frames = 20
+	
 
 func _process(_time):
 	if loader == null:
