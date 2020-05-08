@@ -13,6 +13,9 @@ https://github.com/CycloPiStudio/plataformas/blob/master/Proyecto_Jam_Documento_
 -------------------------------------------
 ## Licences
 
+Las licencias hay que añadirlas al archivo "Licencias.txt" para que asi puedan verse en el proyecto
+https://github.com/CycloPiStudio/plataformas/blob/v.1.0/Menus/Creditos/Texto/Licencias.txt
+
 ### Template
 plataformas
 
