@@ -122,8 +122,11 @@ func morir():
 	pass
 	
 func quitar_vida():
-	if Global.vidas > 0:
+	if Global.vidas > 1:
 		Global.vidas -= 1
+		Global_cambiar_nivel.wait_frames = 20
 		Global_cambiar_nivel.goto_scene(get_parent().filename)
-	elif Global.vidas == 0:
+	elif Global.vidas <= 1 :
+		Global.vidas -= 1
+		Global_cambiar_nivel.wait_frames = 0
 		Global_cambiar_nivel.goto_scene("res://Menus/GameOver/GameOver.tscn")
