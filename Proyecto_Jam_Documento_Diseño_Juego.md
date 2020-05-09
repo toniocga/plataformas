@@ -4,6 +4,8 @@
 
 https://itch.io/jam/rigid-jam-10
 
+Slide Buddy
+
 
 -----------------------------------
 ## Indice Documento_de_diseño 
