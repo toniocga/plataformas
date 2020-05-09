@@ -5,7 +5,7 @@ extends CanvasLayer
 #func puntos (puntos):
 #	$puntuacion.set_text(puntos) 
 func _process(_delta):
-#	get_node("puntuacion").set_text(str(Global.puntuacion))
+	get_node("Score/puntuacion").set_text(str(Global.puntuacion))
 	if Global.vidas == 2:
 		get_node("vidas/vida3").set_visible(false)
 		
