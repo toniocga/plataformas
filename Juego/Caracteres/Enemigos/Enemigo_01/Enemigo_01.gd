@@ -37,6 +37,7 @@ func _on_Area2Denemigo_body_entered(body):
 		if body.get_position().y + alturaEnemigo < get_position().y:
 			body.salto()
 			print("piso")
+			Global.puntuacion += 10
 			queue_free()
 		else:
 			body.morir()
