@@ -1,6 +1,6 @@
 extends Node2D
 onready var nombredelapantalla = get_parent().name
-onready var nodolabelpuntos = get_node("/root/"+nombredelapantalla+"/HUD/puntuacion")
+onready var nodolabelpuntos = get_node("/root/"+nombredelapantalla+"/HUD/monedas")
 # var a = 2
 # var b = "textvar"
 
