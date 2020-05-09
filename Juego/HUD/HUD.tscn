@@ -59,9 +59,23 @@ position = Vector2( 78.7121, 18.0345 )
 scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 6 )
 
-[node name="puntuacion" type="Label" parent="."]
-margin_left = 93.747
-margin_top = 12.3299
-margin_right = 133.747
-margin_bottom = 26.3299
+[node name="Score " type="Label" parent="."]
+margin_left = 135.559
+margin_top = 12.748
+margin_right = 178.559
+margin_bottom = 26.748
+text = "Score: "
+
+[node name="puntuacion" type="Label" parent="Score "]
+margin_left = 42.6482
+margin_top = 7.62939e-06
+margin_right = 82.6482
+margin_bottom = 14.0
+text = "0"
+
+[node name="monedas" type="Label" parent="."]
+margin_left = 90.402
+margin_top = 13.1661
+margin_right = 130.402
+margin_bottom = 27.1661
 text = "0"
