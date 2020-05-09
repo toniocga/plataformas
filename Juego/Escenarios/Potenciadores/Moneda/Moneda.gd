@@ -12,8 +12,8 @@ func _ready():
 
 func _on_Area2D_body_entered(body):
 	if body.get_name() == "Player":
-		Global.puntuacion += 1
-		nodolabelpuntos.set_text(str(Global.puntuacion)) 
+		Global.monedas += 1
+		nodolabelpuntos.set_text(str(Global.monedas)) 
 		hide()
 		$AudioStreamPlayer2D.play()
 
