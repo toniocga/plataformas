@@ -113,6 +113,7 @@ func _on_AudioPasos_finished():
 func morir():
 	bandera_muerto = true
 	Global.puntuacion = 0
+	Global.monedas = 0
 	
 	quitar_vida()
 #	print("game over por límite inferior, esto hay que cambiarlo por game over por areas")
