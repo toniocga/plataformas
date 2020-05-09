@@ -8,6 +8,7 @@ func _ready():
 
 func _on_Timer_timeout():
 	Global.puntuacion = 0
+	Global.monedas = 0
 	Global.vidas = Global.vidasIniciales
 	Global.nivel = 0
 #	get_node("/root").add_child(MenuPrincipal)
