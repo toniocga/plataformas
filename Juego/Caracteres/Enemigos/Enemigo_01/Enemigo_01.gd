@@ -5,6 +5,7 @@ var right = 5
 var direction_x = right
 var gravedad = 300
 var velocity := Vector2()
+export var puntuacion = 10
 export var move_speed := 5
 # radio del area del enemigo para saber cuando lo mata
 onready var alturaEnemigo = $Area2Denemigo/CollisionShape2D.get_shape().radius
@@ -37,7 +38,7 @@ func _on_Area2Denemigo_body_entered(body):
 		if body.get_position().y + alturaEnemigo < get_position().y:
 			body.salto()
 			print("piso")
-			Global.puntuacion += 10
+			Global.puntuacion += puntuacion
 			queue_free()
 		else:
 			body.morir()
