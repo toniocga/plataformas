@@ -6,7 +6,7 @@
 [ext_resource path="res://recursos/TileSet/tileset-escenario.tres" type="TileSet" id=4]
 [ext_resource path="res://Juego/Escenarios/Potenciadores/PasarNivel/PasarNivel.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Juego/Caracteres/Player/Player_01/Player_01.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Juego/Escenarios/Niveles/Nivel_1/Sonidos/Musica.wav" type="AudioStream" id=7]
+[ext_resource path="res://Menus/MenuPrincipal/Sonidos/Sampler_Nivel_1.wav" type="AudioStream" id=7]
 [ext_resource path="res://Juego/Escenarios/Potenciadores/Moneda/Moneda.tscn" type="PackedScene" id=8]
 
 [node name="Level1" type="Node2D"]
