@@ -12,9 +12,8 @@ export var slope_slide_threshold := 50.0
 var vidas_personaje = 3
 var velocity := Vector2()
 #var conesion_anima_fin
-var nodoprincipal
 func _ready():
-	nodoprincipal = get_tree().get_root().get_node("Principal")
+	pass
 func _physics_process(delta: float) -> void:
 	var direction_x := Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 	velocity.x = direction_x * move_speed
