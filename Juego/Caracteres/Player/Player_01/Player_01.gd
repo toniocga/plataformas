@@ -13,64 +13,66 @@ export var slope_slide_threshold := 50.0
 #var vidas_personaje = 3
 var velocity := Vector2()
 #var conesion_anima_fin
-
-var left = -0.5
-var right = 0.5
-var direction_x = right
+onready var arma = get_node("arma_01")
 
 #Cyclo Pi variables
-var bandera_boton_pulsao = false
+#var bandera_boton_pulsao = false
 onready var gameover = load("res://Menus/GameOver/GameOver.tscn").instance()
 var bandera_muerto = false
 var bandera_sonido_pasos = true
 
-
 func _physics_process(delta: float) -> void:
 	
-	if bandera_muerto == false:
-		
+	var direction_x := Input.get_action_strength("derecha") - Input.get_action_strength("izquierda")
+	velocity.x = direction_x * move_speed
 	
-#	avance
-		velocity.x = direction_x * move_speed
-	
-	#	game over por límite inferior, esto hay que cambiarlo por game over por areas
-		if position.y > 170:
-#			print(position.y)
-			morir()	
-		
-	#	salto y gravedad	
-		if not is_on_floor():
-			snap = false
-		if Input.is_action_just_pressed("ui_up") and snap:
-			salto()
-	#		audio_player.play()
-	
-	
-		velocity.y += gravity * delta
-	
-		var snap_vector = Vector2(0,32) if snap else Vector2()
-		velocity = move_and_slide_with_snap(velocity,snap_vector, Vector2.UP, slope_slide_threshold)
-	
-	#	if is_on_floor() and (Input.is_action_just_released("move_right") or Input.is_action_just_released("move_left")):
-	#		velocity.y = 0
-		if is_on_wall():
-			if direction_x == left:
-				direction_x = right
-				if Input.is_action_pressed("ui_up") or bandera_boton_pulsao:
-					salto()
-					
-			elif direction_x == right:
-				direction_x = left
+#	velocity.x = analog_velocity.x* move_speed
+	if Input.is_action_just_pressed("espacio") and snap and not Input.is_action_pressed("abajo"):
+		velocity.y = -jump_force
+		snap = false
 
-				if Input.is_action_pressed("ui_up") or bandera_boton_pulsao:
-					salto()
-					
-		var acaba_aterizar := is_on_floor() and not snap
-		if acaba_aterizar:
-			snap = true
-			bandera_sonido_pasos = true
+
+#		audio_player.play()
+#	if Input.is_action_just_pressed("ui_select"):
+#		pass
+#		get_parent().PonerTile(direcciontile , 10)
+#	if Input.is_action_just_pressed("abajo"):
+#		pass
+#		get_parent().PonerTile(direcciontile , -1)
+	
+	velocity.y += gravity * delta
+
+	var snap_vector = Vector2(0,32) if snap else Vector2()
+	velocity = move_and_slide_with_snap(velocity,snap_vector, Vector2.UP, slope_slide_threshold)
+	
+	if not is_on_floor():
+		snap = false
+	
+	if is_on_floor() and (Input.is_action_just_released("derecha") or Input.is_action_just_released("izquierda")):
+		velocity.y = 0
+
+	var just_landed := is_on_floor() and not snap
+	if just_landed:
+		snap = true
+
+	if position.y > 170:
+#	print(position.y)
+		morir()	
+#	if Input.is_action_pressed("ui_down") and Input.is_action_just_pressed("ui_up"):
+#	print(analog_velocity.y)
+#	if analog_velocity.y < 0 and Input.is_action_just_pressed("jump"):
+#		and Input.is_action_just_pressed("jump")
+#		activar_desactivar_colision()
+	if Input.is_action_just_pressed("click_izquierdo"):
+		arma.disparo()
+			
 		
-		update_animation(velocity)
+	
+	update_animation(velocity)
+
+	#	game over por límite inferior, esto hay que cambiarlo por game over por areas
+
+		
 
 func update_animation(velocity: Vector2) -> void:
 	var animation := "caminar"
@@ -91,13 +93,7 @@ func update_animation(velocity: Vector2) -> void:
 		sprite.play(animation)
 
 
-func _on_TextureButton_pressed():
-	bandera_boton_pulsao = false
-	
-func _on_TextureButton_button_down():
-	bandera_boton_pulsao = true
-	if snap :
-		salto()
+
 	
 func salto():
 	snap = false
