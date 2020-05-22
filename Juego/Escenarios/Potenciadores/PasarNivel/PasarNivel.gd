@@ -6,13 +6,21 @@ extends Node2D
 
 
 func _on_Area2D_body_entered(body):
+	
 	Global_cambiar_nivel.wait_frames = 20
 	if body.get_name() == "Player":
-		if get_parent().filename == "res://Juego/Escenarios/Niveles/Nivel_1/Nivel_1.tscn":
-			Global_cambiar_nivel.goto_scene("res://Juego/Escenarios/Niveles/Nivel_2/Nivel_2.tscn")
-		if get_parent().filename == "res://Juego/Escenarios/Niveles/Nivel_2/Nivel_2.tscn":
-			Global_cambiar_nivel.wait_frames = 0
+		Global.nivel+=1
+		if Global.nivel < 3:	
+			
+			Global_cambiar_nivel.goto_scene("res://Juego/Escenarios/Niveles/Nivel_"+str(Global.nivel)+"/Nivel_"+str(Global.nivel)+".tscn")
+		if Global.nivel == 3:
 			Global_cambiar_nivel.goto_scene("res://Menus/Creditos/Creditos.tscn")
+#		if get_parent().filename == "res://Juego/Escenarios/Niveles/Nivel_1/Nivel_1.tscn":
+#			Global_cambiar_nivel.goto_scene("res://Juego/Escenarios/Niveles/Nivel_2/Nivel_2.tscn")
+#		Global.nivel+=1
+#		if get_parent().filename == "res://Juego/Escenarios/Niveles/Nivel_2/Nivel_2.tscn":
+#			Global_cambiar_nivel.wait_frames = 0
+#			Global_cambiar_nivel.goto_scene("res://Menus/Creditos/Creditos.tscn")
 #		print("pbody," , body.bandera_muerto)
 #		body.bandera_muerto = true
 #		add_child(win)
