@@ -4,7 +4,8 @@ var vidasIniciales = 3
 var puntuacion = 0
 var monedas = 0
 var vidas = vidasIniciales
-var nivel = 0
+var nivel = 1
+
 
 func _ready():
 	print("puntuación: ", puntuacion, ", vidas: ", vidas , ", nivel", nivel, "monedas: ", monedas)
