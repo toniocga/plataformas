@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Juego/Escenarios/Potenciadores/armas_player/arma_01/arma_01.gd" type="Script" id=1]
+
+[node name="arma_01" type="Node2D"]
+script = ExtResource( 1 )
