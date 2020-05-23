@@ -31,14 +31,14 @@ animations = [ {
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 12.7476
-height = 33.176
+height = 32.0
 
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 0
 script = ExtResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 3.43208, 3.28367 )
+position = Vector2( 0, -2.081 )
 frames = SubResource( 1 )
 animation = "saltar"
 
@@ -57,4 +57,5 @@ pitch_scale = 0.5
 stream = ExtResource( 9 )
 
 [node name="arma_01" parent="." instance=ExtResource( 10 )]
+position = Vector2( 0, 10 )
 [connection signal="finished" from="AudioPasos" to="." method="_on_AudioPasos_finished"]
