@@ -1,12 +1,16 @@
 ### Game Jam
+-----------------------------------
+23-05-2020 Theme: Last One Left
 
+https://itch.io/jam/bruh-jam
+
+Che Bro
+-----------------------------------
 09-05-2020 Jam Chill 
 
 https://itch.io/jam/rigid-jam-10
 
 Slide Buddy
-
-
 -----------------------------------
 ## Indice Documento_de_diseño 
 * [Documento de diseño de juego plataformas Godot](#Documento_de_diseño)
