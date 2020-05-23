@@ -1,12 +1,14 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Juego/Escenarios/Potenciadores/armas_player/balas/bala_01/bala_01.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Juego/Escenarios/Potenciadores/armas_player/balas/bala_01/Imgs/bala_01.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 9.418
 
-[node name="bala_01" type="KinematicBody2D"]
+[node name="bala_01" type="KinematicBody2D" groups=[
+"bala",
+]]
 collision_mask = 0
 script = ExtResource( 1 )
 
