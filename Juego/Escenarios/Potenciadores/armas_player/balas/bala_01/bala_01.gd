@@ -5,7 +5,7 @@ var velocity
 var move_speed = 10
 var direction = Vector2(0,0)
 var obj
-onready var tilemap = get_node("/root/Level/TileMap")
+onready var tilemap = get_node("/root/Level_" + str(Global.nivel) + "/TileMap")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$Timer.start()
