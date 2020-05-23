@@ -4,7 +4,7 @@
 [ext_resource path="res://icon.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 21.0477
+radius = 9.418
 
 [node name="bala_01" type="KinematicBody2D"]
 collision_mask = 0
