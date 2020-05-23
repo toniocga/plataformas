@@ -43,3 +43,5 @@ func _on_Area2Denemigo_body_entered(body):
 		else:
 			body.morir()
 		
+	if body.is_in_group("bala"):
+		queue_free()

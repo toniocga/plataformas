@@ -30,7 +30,7 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
 animation = "caminar"
-frame = 1
+frame = 2
 playing = true
 
 [node name="Area2Denemigo" type="Area2D" parent="."]
