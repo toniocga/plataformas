@@ -11,6 +11,9 @@ Che Bro
 https://itch.io/jam/rigid-jam-10
 
 Slide Buddy
+
+https://cyclopistudio.github.io/CyloPi-Studio-Web/testing_2020/slide/slide_buddy.html
+
 -----------------------------------
 ## Indice Documento_de_diseño 
 * [Documento de diseño de juego plataformas Godot](#Documento_de_diseño)
