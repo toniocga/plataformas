@@ -21,13 +21,6 @@ script = ExtResource( 1 )
 position = Vector2( -104.83, -104.83 )
 motion_scale = Vector2( 0.5, 1 )
 
-[node name="ColorRect_azul" type="ColorRect" parent="ParallaxBackground/ParallaxLayer"]
-margin_left = -205.0
-margin_top = -77.0
-margin_right = 3754.0
-margin_bottom = 124.0
-color = Color( 0.00392157, 0.137255, 0.235294, 1 )
-
 [node name="ColorRect_negro" type="ColorRect" parent="ParallaxBackground/ParallaxLayer"]
 margin_left = -198.0
 margin_top = 265.0
@@ -36,12 +29,18 @@ margin_bottom = 423.0
 color = Color( 0, 0, 0, 1 )
 
 [node name="fondo" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( -202.114, -16.7169 )
-scale = Vector2( 2, 2 )
+position = Vector2( -194.217, 121.079 )
 texture = ExtResource( 3 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 0, -1.97758, 1942.82, 145.978 )
+
+[node name="ColorRect_azul" type="ColorRect" parent="ParallaxBackground/ParallaxLayer"]
+margin_left = -205.0
+margin_top = -72.4875
+margin_right = 3754.0
+margin_bottom = 128.512
+color = Color( 0.00392157, 0.137255, 0.235294, 1 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 4 )
