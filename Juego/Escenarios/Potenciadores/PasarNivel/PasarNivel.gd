@@ -10,10 +10,10 @@ func _on_Area2D_body_entered(body):
 	Global_cambiar_nivel.wait_frames = 20
 	if body.get_name() == "Player":
 		Global.nivel+=1
-		if Global.nivel < 3:	
+		if Global.nivel <= Global.numero_max_niveles:	
 			
 			Global_cambiar_nivel.goto_scene("res://Juego/Escenarios/Niveles/Nivel_"+str(Global.nivel)+"/Nivel_"+str(Global.nivel)+".tscn")
-		if Global.nivel == 3:
+		if Global.nivel > Global.numero_max_niveles:
 			Global_cambiar_nivel.goto_scene("res://Menus/Creditos/Creditos.tscn")
 #		if get_parent().filename == "res://Juego/Escenarios/Niveles/Nivel_1/Nivel_1.tscn":
 #			Global_cambiar_nivel.goto_scene("res://Juego/Escenarios/Niveles/Nivel_2/Nivel_2.tscn")
