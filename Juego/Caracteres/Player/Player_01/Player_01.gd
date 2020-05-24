@@ -22,7 +22,7 @@ var bandera_muerto = false
 var bandera_sonido_pasos = true
 
 func _physics_process(delta: float) -> void:
-	print(is_on_floor())
+#	print(is_on_floor())
 	var direction_x := Input.get_action_strength("derecha") - Input.get_action_strength("izquierda")
 	velocity.x = direction_x * move_speed
 #	velocity.x = analog_velocity.x* move_speed
