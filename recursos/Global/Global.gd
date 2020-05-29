@@ -1,14 +1,20 @@
 extends Node
 
-var vidasIniciales = 3
-var puntuacion = 0
-var monedas = 0
-var vidas = vidasIniciales
-var nivel = 1
-var carpeta_niveles = "res://Juego/Escenarios/Niveles"
+#var vidasIniciales : int
+var puntuacion : int
+var monedas : int
+var vidas : int
+var nivel : int
+var carpeta_niveles : String
 var numero_max_niveles : int
 
 func _ready():
+	nivel = 1
+	puntuacion = 0
+	monedas = 0
+	vidas = 3
+	
+	carpeta_niveles = "res://Juego/Escenarios/Niveles"
 	numero_max_niveles = (lista_archivos_en_directorio(carpeta_niveles).size())
 
 

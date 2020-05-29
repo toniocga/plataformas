@@ -6,18 +6,22 @@
 
 [node name="suelo-centro" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
 region_rect = Rect2( 448, 96, 32, 32 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="suelo-centro"]
+[node name="StaticBody2D" type="StaticBody2D" parent="suelo-centro" groups=[
+"destruible",
+]]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="suelo-centro/StaticBody2D"]
 polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="suelo-izq" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -30,6 +34,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="suelo-der" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -42,6 +47,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="suelo-elev-der" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -54,6 +60,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="suelo-elev-centro" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -66,6 +73,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="suelo-elev-izq" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -78,6 +86,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="suelo-elev-izq-tierra" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -89,7 +98,6 @@ region_rect = Rect2( 416, 160, 32, 32 )
 polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="suelo-elev-centro-tierra" type="Sprite" parent="."]
-editor/display_folded = true
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -102,6 +110,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="suelo-elev-der-tierra" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -114,6 +123,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="suelo-bloque-alto" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -126,6 +136,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="suelo-bloque-alto-tierra" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -138,6 +149,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="suelo-bloque-simple" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -150,6 +162,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="ladrillo-peqeno-marron" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 position = Vector2( 12, 0 )
 texture = ExtResource( 1 )
 centered = false
@@ -163,6 +176,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 16, 0, 16 )
 
 [node name="ladrillo-grande-marron" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -175,6 +189,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="bloque-grande-naranja" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -187,6 +202,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="bloque-pequeno-naranja" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -199,6 +215,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 16, 0, 16 )
 
 [node name="pasarela-marron" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -211,6 +228,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 8, 0, 8 )
 
 [node name="pasarela-azul" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -223,6 +241,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 8, 0, 8 )
 
 [node name="ladrillo-gris-1" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 position = Vector2( 16, 16 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -235,6 +254,7 @@ polygon = PoolVector2Array( -16, -16, 16, -16, 16, 16, -16, 16 )
 
 [node name="ladrillo-azul-1" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 position = Vector2( 16, 16 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -247,6 +267,7 @@ polygon = PoolVector2Array( -16, -16, 16, -16, 16, 16, -16, 16 )
 
 [node name="ladrillo_hielo" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 position = Vector2( 16, 16 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -259,6 +280,7 @@ polygon = PoolVector2Array( -16, -16, 16, -16, 16, 16, -16, 16 )
 
 [node name="ladrillo_rojo" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 position = Vector2( 16, 16 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -271,6 +293,7 @@ polygon = PoolVector2Array( -16, -16, 16, -16, 16, 16, -16, 16 )
 
 [node name="piramidal_rojo" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 position = Vector2( 16, 16 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -283,6 +306,7 @@ polygon = PoolVector2Array( -16, -16, 16, -16, 16, 16, -16, 16 )
 
 [node name="piramidal_verde" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 position = Vector2( 16, 16 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -295,6 +319,7 @@ polygon = PoolVector2Array( -16, -16, 16, -16, 16, 16, -16, 16 )
 
 [node name="piramidal_azul" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 position = Vector2( 16, 16 )
 texture = ExtResource( 1 )
 region_enabled = true
@@ -307,6 +332,7 @@ polygon = PoolVector2Array( -16, -16, 16, -16, 16, 16, -16, 16 )
 
 [node name="pasarela_ladrillo_rojo" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -319,6 +345,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 16, 0, 16 )
 
 [node name="pasarela_ladrillo_naranja" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -331,6 +358,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 16, 0, 16 )
 
 [node name="pasarela-hielo" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -343,6 +371,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 16, 0, 16 )
 
 [node name="pasarela-ladrillo_gris" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -355,6 +384,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 16, 0, 16 )
 
 [node name="pasarela_piramidal" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -367,6 +397,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 16, 0, 16 )
 
 [node name="pasarela_piramidal2" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -379,6 +410,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 16, 0, 16 )
 
 [node name="pasarela_piramidal3" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -391,6 +423,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 16, 0, 16 )
 
 [node name="pasarela_piramidal4" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -403,6 +436,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 16, 0, 16 )
 
 [node name="suelo-helado-plata-izq" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -415,6 +449,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="suelo-helado-plata-medio" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -427,6 +462,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="suelo-helado-3" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -439,6 +475,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="suelo-helado-4" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -451,6 +488,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="suelo-helado-5" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -463,6 +501,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="suelo-helado-6" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -475,6 +514,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="suelo-helado-7" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -487,6 +527,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="suelo-helado-8" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -499,6 +540,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="suelo-helado-9" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -511,6 +553,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="suelo-helado-10" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -523,6 +566,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="suelo-helado-11" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -535,6 +579,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="suelo-helado-12" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -547,6 +592,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="suelo-helado-13" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -559,6 +605,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="suelo-helado-14" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -571,6 +618,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="suelo-helado-15" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -583,6 +631,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="suelo-helado-16" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -595,6 +644,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="suelo-helado-17" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -607,6 +657,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="suelo-helado-18" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -619,6 +670,7 @@ polygon = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="suelo-helado-19" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -635,6 +687,7 @@ __meta__ = {
 
 [node name="suelo-helado-20" type="Sprite" parent="."]
 editor/display_folded = true
+visible = false
 texture = ExtResource( 1 )
 centered = false
 region_enabled = true
@@ -649,84 +702,98 @@ __meta__ = {
 }
 
 [node name="arbusto" type="Sprite" parent="."]
+visible = false
 position = Vector2( 16, 16 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 512, 128, 32, 32 )
 
 [node name="arbol" type="Sprite" parent="."]
+visible = false
 position = Vector2( 16, 16 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 416, 0, 32, 32 )
 
 [node name="arbol1" type="Sprite" parent="."]
+visible = false
 position = Vector2( 16, 16 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 448, 0, 32, 32 )
 
 [node name="arbol2" type="Sprite" parent="."]
+visible = false
 position = Vector2( 16, 16 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 480, 0, 32, 32 )
 
 [node name="arbol3" type="Sprite" parent="."]
+visible = false
 position = Vector2( 16, 16 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 416, 32, 32, 32 )
 
 [node name="arbol4" type="Sprite" parent="."]
+visible = false
 position = Vector2( 16, 16 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 448, 32, 32, 32 )
 
 [node name="arbol5" type="Sprite" parent="."]
+visible = false
 position = Vector2( 16, 16 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 480, 32, 32, 32 )
 
 [node name="arbol6" type="Sprite" parent="."]
+visible = false
 position = Vector2( 16, 16 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 448, 64, 32, 32 )
 
 [node name="pino_gris" type="Sprite" parent="."]
+visible = false
 position = Vector2( 16, 16 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 576, 0, 32, 32 )
 
 [node name="pino_gris2" type="Sprite" parent="."]
+visible = false
 position = Vector2( 16, 16 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 576, 32, 32, 32 )
 
 [node name="pino_gris3" type="Sprite" parent="."]
+visible = false
 position = Vector2( 16, 16 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 576, 64, 32, 32 )
 
 [node name="pino_gris4" type="Sprite" parent="."]
+visible = false
 position = Vector2( 16, 16 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 544, 0, 32, 32 )
 
 [node name="pino_gris5" type="Sprite" parent="."]
+visible = false
 position = Vector2( 16, 16 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 544, 32, 32, 32 )
 
 [node name="pino_gris6" type="Sprite" parent="."]
+visible = false
 position = Vector2( 16, 16 )
 texture = ExtResource( 1 )
 region_enabled = true

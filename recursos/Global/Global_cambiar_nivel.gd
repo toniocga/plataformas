@@ -1,5 +1,5 @@
 extends Node
-#var pant_carga
+
 var loader
 var wait_frames = 20
 var time_max = 100 # msec
@@ -10,7 +10,7 @@ func _ready():
 	
 	var root = get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count() -1)
-#	root.call_deferred("add_child()","escena_carga")
+
 func goto_scene(path): # game requests to switch to this scene
 	escena_carga = load("res://Menus/pantalla_carga/Carga.tscn").instance()
 	add_child(escena_carga)
@@ -23,9 +23,7 @@ func goto_scene(path): # game requests to switch to this scene
 
 	current_scene.queue_free() # get rid of the old scene
 	
-#	node("animation").play("carga")
-	
-	
+
 
 func _process(_time):
 	if loader == null:
