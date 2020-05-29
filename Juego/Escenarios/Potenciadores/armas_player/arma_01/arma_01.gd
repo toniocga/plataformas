@@ -1,12 +1,12 @@
 extends Node2D
 onready var sonido_disparo : AudioStreamPlayer2D
-# Declare member variables here. Examples:
+
 var Bullet = preload("res://Juego/Escenarios/Potenciadores/armas_player/balas/bala_01/bala_01.tscn")
-# var b = "text"
+
 
 func _ready():
 	sonido_disparo = $AudioStreamPlayer2D
-	pass # Replace with function body.
+
 	
 	
 func disparo():

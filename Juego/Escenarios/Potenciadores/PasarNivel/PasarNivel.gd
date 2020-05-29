@@ -1,15 +1,17 @@
 extends Node2D
 
 
-#onready var win = load("res://Menus/Win/Win.tscn").instance()
+#onready var pantalla_carga = preload("res://Menus/pantalla_carga/Carga.gd")
 
 
-
+	
 func _on_Area2D_body_entered(body):
 	
-	Global_cambiar_nivel.wait_frames = 20
+	Global_cambiar_nivel.wait_frames = 50
 	if body.get_name() == "Player":
 		Global.nivel+=1
+#		var instance_pantalla = pantalla_carga.new()
+#		instance_pantalla.actualizar_niveles()
 		if Global.nivel <= Global.numero_max_niveles:	
 			
 			Global_cambiar_nivel.goto_scene("res://Juego/Escenarios/Niveles/Nivel_"+str(Global.nivel)+"/Nivel_"+str(Global.nivel)+".tscn")
