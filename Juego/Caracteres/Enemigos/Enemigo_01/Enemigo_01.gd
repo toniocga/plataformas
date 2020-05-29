@@ -8,7 +8,7 @@ var velocity := Vector2()
 export var puntuacion = 10
 export var move_speed := 5
 # radio del area del enemigo para saber cuando lo mata
-onready var alturaEnemigo = $Area2Denemigo/CollisionShape2D.get_shape().radius
+onready var alturaEnemigo = $Area2Denemigo/CollisionShape2D.get_shape().radius*2
 
 func _physics_process(delta): 
 #	print(alturaEnemigo2)
@@ -37,7 +37,7 @@ func _on_Area2Denemigo_body_entered(body):
 	if body.name == "Player":
 		if body.get_position().y + alturaEnemigo < get_position().y:
 			body.salto()
-			print("piso")
+#			print("piso")
 			Global.puntuacion += puntuacion
 			queue_free()
 		else:

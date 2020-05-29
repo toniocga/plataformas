@@ -30,10 +30,12 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
 animation = "caminar"
-frame = 2
+frame = 3
 playing = true
 
-[node name="Area2Denemigo" type="Area2D" parent="."]
+[node name="Area2Denemigo" type="Area2D" parent="." groups=[
+"enemigo",
+]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2Denemigo"]
 shape = SubResource( 3 )
