@@ -22,27 +22,27 @@ script = ExtResource( 1 )
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = 1.0
 margin_top = -1.0
-margin_right = 478.0
-margin_bottom = 273.0
-color = Color( 0, 0, 0, 1 )
+margin_right = 956.0
+margin_bottom = 561.0
+color = Color( 0.2, 0.219608, 0.0470588, 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 168.822, 140.183 )
+position = Vector2( 403.402, 281.816 )
 frames = SubResource( 1 )
 animation = "carga"
 playing = true
 
 [node name="Label_level" type="Label" parent="."]
-margin_left = 205.0
-margin_top = 132.0
-margin_right = 245.0
-margin_bottom = 149.0
+margin_left = 464.48
+margin_top = 272.869
+margin_right = 504.48
+margin_bottom = 289.869
 text = "Level:"
 
 [node name="num_level" type="Label" parent="."]
-margin_left = 254.638
-margin_top = 131.098
-margin_right = 294.638
-margin_bottom = 148.098
+margin_left = 514.497
+margin_top = 273.466
+margin_right = 554.497
+margin_bottom = 304.466
 text = "0
 "
