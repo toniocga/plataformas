@@ -47,6 +47,8 @@ func _physics_process(delta: float) -> void:
 #		snap = true
 	if not is_on_floor():
 		snap = false
+	if is_on_wall() and Input.is_action_pressed("espacio"):
+		salto()
 	if position.y > 170:
 #	
 		morir()
