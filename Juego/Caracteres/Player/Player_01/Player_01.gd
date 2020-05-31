@@ -23,6 +23,7 @@ var bandera_sonido_pasos = true
 
 func _physics_process(delta: float) -> void:
 #	print(is_on_floor())
+	
 	var direction_x := Input.get_action_strength("derecha") - Input.get_action_strength("izquierda")
 	velocity.x = direction_x * move_speed
 #	velocity.x = analog_velocity.x* move_speed
@@ -49,11 +50,11 @@ func _physics_process(delta: float) -> void:
 		snap = false
 	if is_on_wall() and Input.is_action_pressed("espacio"):
 		salto()
-	if position.y > 170:
+	if position.y > 300:
 #	
 		morir()
 #	
-	if Input.is_action_just_pressed("click_izquierdo"):
+	if Input.is_action_pressed("click_izquierdo"):
 		arma.disparo()
 			
 	if Input.is_action_just_pressed("click_derecho"):
@@ -65,8 +66,9 @@ func _physics_process(delta: float) -> void:
 
 	#	game over por límite inferior, esto hay que cambiarlo por game over por areas
 
-		
-
+#var mover_caja
+#func mover_caja():
+#	mover_caja = direction_x
 func update_animation(velocity: Vector2) -> void:
 	var animation := "caminar"
 	
