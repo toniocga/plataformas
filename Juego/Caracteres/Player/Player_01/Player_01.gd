@@ -20,48 +20,61 @@ onready var lanza_granadas = get_node("lanza_granadas")
 #onready var gameover = load("res://Menus/GameOver/GameOver.tscn").instance()
 var bandera_muerto = false
 var bandera_sonido_pasos = true
+var direction_x
 
 func _physics_process(delta: float) -> void:
-#	print(is_on_floor())
 	
-	var direction_x := Input.get_action_strength("derecha") - Input.get_action_strength("izquierda")
-	velocity.x = direction_x * move_speed
-#	velocity.x = analog_velocity.x* move_speed
-	if Input.is_action_just_pressed("espacio") and snap :
-		salto()
-
 	velocity.y += gravity * delta
-	
-	var snap_vector =  Vector2(0,32) if snap else Vector2()
+	var snap_vector = Vector2(0,32) if snap else Vector2()
 	velocity = move_and_slide_with_snap(velocity,snap_vector, Vector2.UP, slope_slide_threshold)
-#	velocity = move_and_slide(velocity,snap_vector)
-#	Vector2(0,32) if snap else Vector2()
-	
-#	if is_on_floor() and (Input.is_action_just_released("derecha") or Input.is_action_just_released("izquierda")):
-#		velocity.y = 0
-
 	var just_landed := is_on_floor() and not snap
 	if just_landed:
 		snap = true
-#	var just_landed =  ($RayCast2D1.is_colliding() and $RayCast2D2.is_colliding()) and not snap
-#	if just_landed:
-#		snap = true
-	if not is_on_floor():
-		snap = false
-	if is_on_wall() and Input.is_action_pressed("espacio"):
-		salto()
 	if position.y > 300:
 #	
 		morir()
+	update_animation(velocity)
+
+func movimiento():
+	velocity.x = direction_x * move_speed
+
+func disparo_1():
+	arma.disparo()
+
+func disparo_2():
+	lanza_granadas.angulo_granada(get_node("AnimatedSprite").is_flipped_h())
+	lanza_granadas.actualizar_direcion()
+	lanza_granadas.lanzar_granada()
+
+func _input(event):
+	if Input.is_action_just_pressed("espacio") and snap and not Input.is_action_pressed("ui_down"):
+		salto()
+#	Parar la caida
+	if is_on_floor() and (Input.is_action_just_released("derecha") or Input.is_action_just_released("izquierda")):
+		velocity.y = 0
+		
+
+
+#	Mover izquierda derecha
+	if Input.is_action_pressed("derecha") or Input.is_action_pressed("izquierda"):
+		direction_x = Input.get_action_strength("derecha") - Input.get_action_strength("izquierda")
+		movimiento()
+#	Parar movimiento
+	if Input.is_action_pressed("derecha") == false and Input.is_action_pressed("izquierda") == false:
+		velocity.x = 0
+	
+
+	if is_on_wall() and Input.is_action_pressed("espacio"):
+		salto()
+
 #	
 	if Input.is_action_pressed("click_izquierdo"):
-		arma.disparo()
-			
+		disparo_1()
+
 	if Input.is_action_just_pressed("click_derecho"):
-		lanza_granadas.angulo_granada(get_node("AnimatedSprite").is_flipped_h())
-		lanza_granadas.actualizar_direcion()
-		lanza_granadas.lanzar_granada()
-		
+		disparo_2()
+
+
 	update_animation(velocity)
 
 	#	game over por límite inferior, esto hay que cambiarlo por game over por areas
@@ -71,26 +84,26 @@ func _physics_process(delta: float) -> void:
 #	mover_caja = direction_x
 func update_animation(velocity: Vector2) -> void:
 	var animation := "caminar"
-	
+
 	if abs(velocity.x) > 10.0:
 #		
 		sprite.flip_h = velocity.x < 0
 		animation = "caminar"
-		
+
 		bandera_sonido_pasos = false
-		
-	
-		
-	
+
+
+
+
 	if not is_on_floor():
 		animation = "saltar" if velocity.y < 0 else "caer"
-		
+
 	if sprite.animation != animation:
 		sprite.play(animation)
 
 
 
-	
+
 func salto():
 	snap = false
 	velocity.y = -jump_force
@@ -101,19 +114,19 @@ func _on_AudioPasos_finished():
 	if snap :
 		bandera_sonido_pasos = true
 #	pass # Replace with function body.
-	
+
 func morir():
 	bandera_muerto = true
 	Global.puntuacion = 0
 	Global.monedas = 0
-	
+
 	quitar_vida()
 #	print("game over por límite inferior, esto hay que cambiarlo por game over por areas")
 
 #	gameover.set_position(get_position())
 #	Global_cambiar_nivel.goto_scene("res://Menus/GameOver/GameOver.tscn")
 	pass
-	
+
 func quitar_vida():
 	if Global.vidas > 1:
 		Global.vidas -= 1
@@ -125,3 +138,7 @@ func quitar_vida():
 		Global_cambiar_nivel.goto_scene("res://Menus/GameOver/GameOver.tscn")
 #		get_parent().add_child(gameover)
 #		add_child(gameover)
+
+
+
+################################################3
