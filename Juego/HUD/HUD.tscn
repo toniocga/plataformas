@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Juego/HUD/HUD.gd" type="Script" id=1]
 [ext_resource path="res://Juego/HUD/Imgs/player-walk-1.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Juego/HUD/Imgs/botones/boton-der.png" type="Texture" id=4]
 [ext_resource path="res://Juego/HUD/Imgs/botones/boton-salto.png" type="Texture" id=5]
 [ext_resource path="res://Juego/HUD/Imgs/moneda-1.png" type="Texture" id=6]
+[ext_resource path="res://Juego/HUD/touch/touch.tscn" type="PackedScene" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -79,3 +80,5 @@ margin_top = 13.1661
 margin_right = 130.402
 margin_bottom = 27.1661
 text = "0"
+
+[node name="touch2" parent="." instance=ExtResource( 7 )]
