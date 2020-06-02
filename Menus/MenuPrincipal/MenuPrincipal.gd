@@ -15,3 +15,8 @@ func _on_TextureButton_button_down():
 #	queue_free()
 	Global_cambiar_nivel.goto_scene("res://Juego/Escenarios/Niveles/Nivel_1/Nivel_1.tscn")
 	pass # Replace with function body.
+
+
+func _on_TextureButtonOption_button_down():
+	Global_cambiar_nivel.goto_scene("res://Menus/Controles/controles.tscn")
+	pass # Replace with function body.

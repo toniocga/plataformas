@@ -1,0 +1,100 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Menus/Controles/controles.gd" type="Script" id=1]
+[ext_resource path="res://Juego/HUD/touch/Imgs/boton-der.png" type="Texture" id=2]
+[ext_resource path="res://Juego/HUD/touch/Imgs/boton-izq.png" type="Texture" id=3]
+[ext_resource path="res://Juego/HUD/touch/Imgs/boton-salto.png" type="Texture" id=4]
+[ext_resource path="res://Juego/HUD/touch/Imgs/boton-A.png" type="Texture" id=5]
+[ext_resource path="res://Juego/HUD/touch/Imgs/boton-B.png" type="Texture" id=6]
+
+[node name="controles" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="LineEdit" type="LineEdit" parent="."]
+margin_right = 58.0
+margin_bottom = 24.0
+
+[node name="touchMode" type="Label" parent="."]
+margin_left = 246.05
+margin_top = 33.2501
+margin_right = 374.05
+margin_bottom = 47.2501
+text = "Touch control mode"
+
+[node name="CheckButton" type="CheckButton" parent="touchMode"]
+margin_left = 141.55
+margin_top = -9.50003
+margin_right = 217.55
+margin_bottom = 30.5
+pressed = true
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 71.2501
+margin_top = 10.45
+margin_right = 199.25
+margin_bottom = 24.45
+text = "Volver"
+
+[node name="Volver" type="CheckButton" parent="Label2"]
+margin_left = 39.9
+margin_top = -11.4001
+margin_right = 115.9
+margin_bottom = 28.5999
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 24.7, 61.7501 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="Sprite"]
+margin_left = 34.2
+margin_top = -5.70001
+margin_right = 74.2
+margin_bottom = 8.29999
+text = "Right, D"
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 24.7, 104.5 )
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="Sprite2"]
+margin_left = 34.2
+margin_top = -5.70001
+margin_right = 74.2
+margin_bottom = 8.29999
+text = "Left, A"
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 24.7, 147.25 )
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Sprite3"]
+margin_left = 34.2
+margin_top = -5.70001
+margin_right = 74.2
+margin_bottom = 8.29999
+text = "Up, W"
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 25.65, 192.85 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="Sprite4"]
+margin_left = 34.2
+margin_top = -5.70001
+margin_right = 74.2
+margin_bottom = 8.29999
+text = "Space, Left clic"
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( 26.6, 236.55 )
+texture = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="Sprite5"]
+margin_left = 34.2
+margin_top = -5.70001
+margin_right = 74.2
+margin_bottom = 8.29999
+text = "M, Right clic"
+[connection signal="text_entered" from="LineEdit" to="." method="_on_LineEdit_text_entered"]
+[connection signal="toggled" from="touchMode/CheckButton" to="." method="_on_CheckButton_toggled"]
+[connection signal="button_down" from="Label2/Volver" to="." method="_on_Volver_button_down"]
