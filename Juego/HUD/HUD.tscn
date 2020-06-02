@@ -1,12 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Juego/HUD/HUD.gd" type="Script" id=1]
 [ext_resource path="res://Juego/HUD/Imgs/player-walk-1.png" type="Texture" id=2]
-[ext_resource path="res://Juego/HUD/Imgs/botones/boton-izq.png" type="Texture" id=3]
-[ext_resource path="res://Juego/HUD/Imgs/botones/boton-der.png" type="Texture" id=4]
-[ext_resource path="res://Juego/HUD/Imgs/botones/boton-salto.png" type="Texture" id=5]
-[ext_resource path="res://Juego/HUD/Imgs/moneda-1.png" type="Texture" id=6]
-[ext_resource path="res://Juego/HUD/touch/touch.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Juego/HUD/Imgs/moneda-1.png" type="Texture" id=3]
+[ext_resource path="res://Juego/HUD/touch/touch.tscn" type="PackedScene" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -40,25 +37,10 @@ position = Vector2( 43.9837, 17.7206 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 2 )
 
-[node name="touch" type="Node2D" parent="."]
-visible = false
-
-[node name="boton-izq" type="TouchScreenButton" parent="touch"]
-normal = ExtResource( 3 )
-action = "ui_left"
-
-[node name="boton-der" type="TouchScreenButton" parent="touch"]
-normal = ExtResource( 4 )
-action = "ui_right"
-
-[node name="boton-salto" type="TouchScreenButton" parent="touch"]
-normal = ExtResource( 5 )
-action = "ui_up"
-
 [node name="Monedas" type="Sprite" parent="."]
 position = Vector2( 78.7121, 18.0345 )
 scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 6 )
+texture = ExtResource( 3 )
 
 [node name="Score " type="Label" parent="."]
 margin_left = 135.559
@@ -81,4 +63,4 @@ margin_right = 130.402
 margin_bottom = 27.1661
 text = "0"
 
-[node name="touch2" parent="." instance=ExtResource( 7 )]
+[node name="touch" parent="." instance=ExtResource( 4 )]
