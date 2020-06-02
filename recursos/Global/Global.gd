@@ -7,6 +7,7 @@ var vidas : int
 var nivel : int
 var carpeta_niveles : String
 var numero_max_niveles : int
+var touch = true
 
 func _ready():
 	nivel = 1
