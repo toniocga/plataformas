@@ -1,4 +1,12 @@
 ### Game Jam
+04-10-2020 Theme: "One button to control"
+
+https://itch.io/jam/slimebarrelggj2
+
+Plantilla:
+
+https://github.com/CycloPiStudio/plataformas/commit/95cadfc793653e441796ded7ae73b15979d0165f
+
 -----------------------------------
 23-05-2020 Theme: Last One Left
 
