@@ -1,0 +1,68 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Juego/Caracteres/Player/Player_01/Player_01.gd" type="Script" id=1]
+[ext_resource path="res://Juego/Caracteres/Player/Player_01/Imgs/player-jump-1.png" type="Texture" id=2]
+[ext_resource path="res://Juego/Caracteres/Player/Player_01/Imgs/player-walk-1.png" type="Texture" id=3]
+[ext_resource path="res://Juego/Caracteres/Player/Player_01/Imgs/player-walk-2.png" type="Texture" id=4]
+[ext_resource path="res://Juego/Caracteres/Player/Player_01/Imgs/player-walk-3.png" type="Texture" id=5]
+[ext_resource path="res://Juego/Caracteres/Player/Player_01/Imgs/player-walk-4.png" type="Texture" id=6]
+[ext_resource path="res://Juego/Caracteres/Player/Player_01/Imgs/player-jump-2.png" type="Texture" id=7]
+[ext_resource path="res://Juego/Caracteres/Player/Player_01/Sonidos/paso.wav" type="AudioStream" id=8]
+[ext_resource path="res://Juego/Caracteres/Player/Player_01/Sonidos/salto.wav" type="AudioStream" id=9]
+[ext_resource path="res://Juego/Escenarios/Potenciadores/armas_player/arma_01/arma_01.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Juego/Escenarios/Potenciadores/armas_player/granada_01/lanza_granadas.tscn" type="PackedScene" id=11]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "saltar",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "caminar",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "caer",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 12, 19.3102 )
+
+[sub_resource type="RayShape2D" id=3]
+
+[node name="Player" type="KinematicBody2D"]
+collision_mask = 0
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0.214645, -5.79524 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 1 )
+animation = "saltar"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -2 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+shape = SubResource( 3 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="AudioPasos" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 8 )
+volume_db = -15.0
+
+[node name="AudioSalto" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 9 )
+
+[node name="arma_01" parent="." instance=ExtResource( 10 )]
+
+[node name="lanza_granadas" parent="." instance=ExtResource( 11 )]
+[connection signal="finished" from="AudioPasos" to="." method="_on_AudioPasos_finished"]

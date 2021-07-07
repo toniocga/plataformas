@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Juego/Escenarios/Potenciadores/armas_player/arma_01/arma_01.gd" type="Script" id=1]
+[ext_resource path="res://Juego/Escenarios/Potenciadores/armas_player/arma_01/sound/laser-shoot.wav" type="AudioStream" id=2]
+
+[node name="arma_01" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 2 )
+
+[node name="Timer_delay" type="Timer" parent="."]
+wait_time = 0.1
+[connection signal="timeout" from="Timer_delay" to="." method="_on_Timer_delay_timeout"]

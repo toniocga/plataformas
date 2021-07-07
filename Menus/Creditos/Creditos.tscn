@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Menus/Creditos/Creditos.gd" type="Script" id=1]
+[ext_resource path="res://recursos/TileSet/tileset-escenario.tres" type="TileSet" id=2]
+[ext_resource path="res://Menus/Creditos/Imgs/player-jump-1.png" type="Texture" id=3]
+[ext_resource path="res://recursos/Fuentes/FuturaRenner-master/FuturaRenner-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://recursos/Sonidos/win_final.wav" type="AudioStream" id=5]
+
+[sub_resource type="StyleBoxFlat" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[node name="Creditos" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 0, 71, 0, 1, 71, 0, 2, 71, 0, 3, 71, 0, 4, 71, 0, 5, 71, 0, 6, 71, 0, 7, 71, 0, 8, 71, 0, 9, 71, 0, 10, 71, 0, 11, 71, 0, 12, 71, 0, 13, 71, 0, 14, 71, 0, 65536, 71, 0, 65537, 71, 0, 65538, 71, 0, 65539, 71, 0, 65540, 71, 0, 65541, 71, 0, 65542, 71, 0, 65543, 71, 0, 65544, 71, 0, 65545, 71, 0, 65546, 71, 0, 65547, 71, 0, 65548, 71, 0, 65549, 71, 0, 65550, 71, 0, 131072, 71, 0, 131073, 71, 0, 131074, 36, 0, 131075, 36, 0, 131076, 36, 0, 131077, 71, 0, 131078, 36, 0, 131079, 71, 0, 131080, 36, 0, 131081, 71, 0, 131082, 71, 0, 131083, 71, 0, 131084, 36, 0, 131085, 71, 0, 131086, 71, 0, 196608, 71, 0, 196609, 71, 0, 196610, 36, 0, 196611, 71, 0, 196612, 71, 0, 196613, 71, 0, 196614, 36, 0, 196615, 71, 0, 196616, 36, 0, 196617, 36, 0, 196618, 71, 0, 196619, 71, 0, 196620, 36, 0, 196621, 71, 0, 196622, 71, 0, 262144, 71, 0, 262145, 71, 0, 262146, 36, 0, 262147, 36, 0, 262148, 71, 0, 262149, 71, 0, 262150, 36, 0, 262151, 71, 0, 262152, 36, 0, 262153, 71, 0, 262154, 36, 0, 262155, 71, 0, 262156, 36, 0, 262157, 71, 0, 262158, 71, 0, 327680, 71, 0, 327681, 71, 0, 327682, 36, 0, 327683, 71, 0, 327684, 71, 0, 327685, 71, 0, 327686, 36, 0, 327687, 71, 0, 327688, 36, 0, 327689, 71, 0, 327690, 71, 0, 327691, 36, 0, 327692, 36, 0, 327693, 71, 0, 327694, 71, 0, 393216, 71, 0, 393217, 71, 0, 393218, 36, 0, 393219, 71, 0, 393220, 71, 0, 393221, 71, 0, 393222, 36, 0, 393223, 71, 0, 393224, 36, 0, 393225, 71, 0, 393226, 71, 0, 393227, 71, 0, 393228, 36, 0, 393229, 71, 0, 393230, 71, 0, 458752, 71, 0, 458753, 71, 0, 458754, 71, 0, 458755, 71, 0, 458756, 71, 0, 458757, 71, 0, 458758, 71, 0, 458759, 71, 0, 458760, 71, 0, 458761, 71, 0, 458762, 71, 0, 458763, 71, 0, 458764, 71, 0, 458765, 71, 0, 458766, 71, 0, 524288, 71, 0, 524289, 71, 0, 524290, 71, 0, 524291, 71, 0, 524292, 71, 0, 524293, 71, 0, 524294, 71, 0, 524295, 71, 0, 524296, 71, 0, 524297, 71, 0, 524298, 71, 0, 524299, 71, 0, 524300, 71, 0, 524301, 71, 0, 524302, 71, 0 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 239.086, 161.544 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 6.0
+autostart = true
+
+[node name="Creditos" type="Label" parent="."]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 40.0
+margin_bottom = 14.0
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.796078, 0.921569, 0.0666667, 1 )
+
+[node name="Audio_final" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

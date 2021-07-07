@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/explosion_granada.wav-9ec438d6b184f51315692a799bdca091.sample"
+
+[deps]
+
+source_file="res://Juego/Escenarios/Potenciadores/armas_player/explosiones/sound/explosion_granada.wav"
+dest_files=[ "res://.import/explosion_granada.wav-9ec438d6b184f51315692a799bdca091.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
